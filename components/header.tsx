@@ -1,5 +1,5 @@
 import HeaderLogo from "./header-logo";
-
+import Navigation from "./navigation";
 
 const Header = () => {
   return (
@@ -11,11 +11,11 @@ const Header = () => {
           </div>
         </section>
         <div className="max-w-screen-2xl mx-auto">
-            <div className="w-full flex items-center justify-between mb-14">
-                <div className="flex items-center lg: gap-x-16">
-                    <HeaderLogo/>
-                </div>
+          <div className="w-full flex items-center justify-between mb-14">
+            <div className="flex items-center lg: gap-x-16">
+              <HeaderLogo /> <Navigation />
             </div>
+          </div>
         </div>
       </header>
     </>
