@@ -11,7 +11,7 @@ const Header = () => {
           </div>
         </section>
         <div className="max-w-screen-2xl mx-auto">
-          <div className="w-full flex items-center justify-between mb-14 py-4 px-4 lg:px-14">
+          <div className="w-full flex items-center justify-end lg:justify-between mb-14 py-4 px-4 lg:px-14">
             <div className="flex items-center lg: gap-x-16">
               <HeaderLogo /> <Navigation />
             </div>
