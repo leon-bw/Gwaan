@@ -1,9 +1,13 @@
-import Hero from "@/components/hero"
+import Hero from "@/components/hero";
+import Banner from "@/components/banner";
 
 const Home = () => {
   return (
-    <Hero />
-  )
-}
+    <>
+      <Hero />
+      <Banner />
+    </>
+  );
+};
 
-export default Home
+export default Home;
