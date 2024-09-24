@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const Hero = () => {
   return (
-    <section className="bg-[radial-gradient(ellipse_200%_100%_at_bottom_right,#318741,#141414_100%)] overflow-x-clip">
+    <section className="bg-[radial-gradient(ellipse_200%_100%_at_bottom_right,#318741,#141414_90%)] overflow-x-clip">
       <div className="container max-w-screen-2xl mx-auto pt-12 pb-20 px-4 lg:px-14 md:pt-5 md:pb-10">
         <div className="md:flex items-center gap-2">
           <div className="md:w-[478px]">
@@ -30,7 +30,7 @@ const Hero = () => {
               <Button
                 size="default"
                 variant="ghost"
-                className="hover:bg-white/30 hover:text-white font-semibold py-6 gap-1 transition ease-in-out"
+                className=" text-white hover:bg-white/30 hover:text-white font-semibold py-6 gap-1 transition ease-in-out"
               >
                 Learn more <ChevronRight size={16} />
               </Button>

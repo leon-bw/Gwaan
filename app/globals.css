@@ -104,5 +104,9 @@ body {
     @apply text-black bg-transparent
   }
 
+  .banner-image {
+    @apply h-14 w-auto grayscale
+  }
+
 
 }
