@@ -49,19 +49,19 @@ const Navigation = () => {
           <Button
             variant="outline"
             size="sm"
-            className="font-normal bg-white/10 hover:bg-black/20 hover:text-white border-none focus-visible:ring-offset-0 focus-visible:ring-transparent outline-none text-white focus:bg-white/30 transition"
+            className="font-normal bg-white/10 hover:bg-white/20 hover:text-white border-none focus-visible:ring-offset-0 focus-visible:ring-transparent outline-none text-white focus:bg-white/30 transition"
           >
             <Menu className="size-5" />
           </Button>
         </SheetTrigger>
-        <SheetContent side="right" className="px-2 bg-gradient-to-t from-green-950 to-green-800 border-none">
+        <SheetContent side="right" className="px-2 bg-night border-none">
           <nav className="flex flex-col gap-y-2 pt-6">
             {routes.map((route) => (
               <Button
                 key={route.href}
-                variant={route.href === pathname ? "secondary" : "ghost"}
+                variant={route.href === pathname ? "primary" : "ghost"}
                 onClick={() => onClick(route.href)}
-                className="w-full text-black hover:bg-black/20 hover:text-white"
+                className="w-full text-white hover:bg-black hover:text-white"
               >
                 {route.label}
               </Button>

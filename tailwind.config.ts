@@ -10,6 +10,13 @@ const config: Config = {
   theme: {
   	extend: {
   		colors: {
+			night: "#141414",
+			darkGreen: "#102306",
+			gwaanGreen: "#20A450",
+			seaGreen: "#318741",
+			schoolBus: "#F6D813",
+			gwaanYellow: "#EEE026",
+			seaSalt: "#FAFAFA",
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
   			card: {

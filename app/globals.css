@@ -90,3 +90,19 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded-lg font-medium inline-flex items-center justify-center
+  }
+
+  .btn-primary {
+    @apply bg-white text-black hover:bg-black/20 hover:text-seaGreen
+  }
+
+  .btn-text {
+    @apply text-black bg-transparent
+  }
+
+
+}
