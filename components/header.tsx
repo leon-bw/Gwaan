@@ -4,7 +4,7 @@ import Navigation from "./navigation";
 const Header = () => {
   return (
     <>
-      <header className="sticky top-0 backdrop-blur-sm bg-night/90 z-10">
+      <header className="sticky top-0 backdrop-blur-sm bg-night z-10">
         <section className="flex justify-center items-center py-3 bg-black text-white text-sm">
           <div className="inline-flex gap-1 items-center">
             <p>Beta coming soon</p>
