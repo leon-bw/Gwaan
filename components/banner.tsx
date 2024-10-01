@@ -15,7 +15,7 @@ const logos = [
 
 const Banner = () => {
   return (
-    <section className="py-4 md:py-8 bg-white">
+    <section className="py-4 md:py-8 bg-seaSalt">
       <div className="container max-w-screen-2xl mx-auto">
         <div className="flex  items-center justify-center overflow-hidden [mask-image:linear-gradient(to_right,transparent,black,transparent)]">
           <div className="flex gap-14 flex-none">
