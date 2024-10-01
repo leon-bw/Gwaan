@@ -108,5 +108,12 @@ body {
     @apply h-14 w-auto grayscale
   }
 
+  .section-title {
+    @apply text-center text-3xl md:text-6xl md:leading-[60px] font-bold tracking-tighter bg-gradient-to-b from-night to-seaGreen text-transparent bg-clip-text
+  }
+
+  .section-description {
+    @apply text-center text-lg tracking-tight leading-8 text-night
+  }
 
 }
