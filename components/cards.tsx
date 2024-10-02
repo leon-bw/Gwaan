@@ -11,12 +11,12 @@ const contents = [
   },
   {
     icon: CircleCheckBig,
-    heading: "Real-Time AI Feedback, Every Rep",
+    heading: "Real-Time Feedback, Every Rep",
     text: "Take control of your form with instant, feedback. Get corrections as you move, making every rep count towards your fitness goals.",
   },
   {
     icon: TrendingUp,
-    heading: "Track Your Progress, See Your Gains",
+    heading: "Track Your Progress, See Gains",
     text: "Earn points for every perfectly executed rep and improve your form over time. Take your performance and fitness to the next level.",
   },
 ];
@@ -24,7 +24,7 @@ const contents = [
 const Cards = () => {
   return (
     <section className="bg-seaSalt py-24">
-      <div className="container px-4 mx-auto max-w-screen-lg">
+      <div className="container px-4 mx-auto max-w-screen-xl lg:px-10">
         <div className="section-heading">
           <h2 className="section-title">Smart fitness, Simplified</h2>
           <p className="section-description mt-5">
@@ -32,11 +32,11 @@ const Cards = () => {
             at home or on the go.
           </p>
         </div>
-        <div className="flex flex-col items-center gap-6 mt-8 lg:flex-row">
+        <div className="flex flex-col items-center gap-6 mt-8 lg:flex-row lg:gap-8 lg:mt-12">
           {contents.map((content, index) => (
             <Card
               key={index}
-              className="p-6 shadow-night/20 hover:shadow-seaGreen transition ease-in-out duration-300"
+              className="p-4 shadow-night/20 hover:shadow-seaGreen transition ease-in-out duration-300 lg:min-h-80"
             >
               <CardContent className="pt-6">
                 <div className="flex flex-col items-center gap-6 text-center justify-evenly w-full">
