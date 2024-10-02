@@ -116,4 +116,8 @@ body {
     @apply text-center text-lg tracking-tight leading-8 text-night
   }
 
+  .section-heading {
+    @apply max-w-xl mx-auto
+  }
+
 }
