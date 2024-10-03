@@ -6,7 +6,7 @@ const HeaderLogo = () => {
   return (
     <Link href="/">
       <div className="items-center lg:flex">
-      <Image src={Logo} alt="Gwaan Logo" height={60} width={60} />
+      <Image src={Logo} alt="Gwaan Logo" height={24} />
       </div>
     </Link>
   );
