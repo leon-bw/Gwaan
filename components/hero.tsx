@@ -23,14 +23,14 @@ const Hero = () => {
               <Button
                 size="lg"
                 variant="secondary"
-                className="font-semibold bg-white text-black hover:bg-white/30 hover:border-seaGreen hover:text-white transition ease-in-out"
+                className="font-semibold bg-white text-black hover:bg-white/30 hover:border-seaGreen hover:text-white transition"
               >
                 Get Early Access
               </Button>
               <Button
                 size="default"
                 variant="ghost"
-                className=" text-white hover:bg-white/30 hover:text-white font-semibold py-6 gap-1 transition ease-in-out"
+                className=" text-white hover:bg-white/30 hover:text-white font-semibold py-6 gap-1 transition"
               >
                 Learn more <ChevronRight size={16} />
               </Button>
