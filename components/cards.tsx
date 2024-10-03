@@ -26,7 +26,7 @@ const Cards = () => {
     <section className="bg-seaSalt py-24">
       <div className="container px-4 mx-auto max-w-screen-xl lg:px-10">
         <div className="section-heading">
-          <h2 className="section-title">Smart fitness, Simplified</h2>
+          <h2 className="section-title pb-5">Smart fitness, Simplified</h2>
           <p className="section-description mt-5">
             Experience the future of fitness with our AI engine, whether you’re
             at home or on the go.
@@ -44,7 +44,7 @@ const Cards = () => {
                   <CardTitle className="text-lg font-bold text-night/70">
                     {content.heading}
                   </CardTitle>
-                  <p className="">{content.text}</p>
+                  <p>{content.text}</p>
                 </div>
               </CardContent>
             </Card>

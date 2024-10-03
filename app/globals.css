@@ -120,4 +120,8 @@ body {
     @apply max-w-xl mx-auto
   }
 
+  .social-icon {
+    @apply hover:bg-white/20 hover:text-white p-2 rounded-md transition
+  }
+
 }
