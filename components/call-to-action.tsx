@@ -1,32 +1,53 @@
+"use client";
+
 import React from "react";
 import { Button } from "./ui/button";
 import { ChevronRight } from "lucide-react";
-import Image from "next/image";
+// import Image from "next/image";
 import Molecule from "@/assets/molecule.png";
 import Molecule2 from "@/assets/molecule_2.png";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
 
 const CallToAction = () => {
+  const sectionRef = useRef(null);
+
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start end", "end start"],
+  });
+
+  const translateY = useTransform(scrollYProgress, [0, 1], [150, -150]);
+
   return (
-    <section className="bg-[radial-gradient(ellipse_200%_100%_at_top_right,#318741,#141414_90%)] overflow-x-clip py-24">
+    <section
+      ref={sectionRef}
+      className="bg-[radial-gradient(ellipse_200%_100%_at_top_right,#318741,#141414_90%)] overflow-x-clip py-24"
+    >
       <div className="container mx-auto">
         <div className="section-heading px-4 text-center relative">
           <h2 className="text-3xl md:text-6xl font-bold tracking-tighter bg-gradient-to-b from-white to-seaGreen text-transparent bg-clip-text md:pb-6">
             Sign up to get early access
           </h2>
           <p className="section-description text-white mt-5">
-            Be the first to experience smarter, more effective workouts. Sign up now for early access and start transforming your fitness journey!
+            Be the first to experience smarter, more effective workouts. Sign up
+            now for early access and start transforming your fitness journey!
           </p>
-          <Image
-            src={Molecule}
+          <motion.img
+            src={Molecule.src}
             alt="Molecule"
             width={360}
             className="absolute -left-[390px] -top-[157px]"
+            style={{ translateY,
+              rotate: "-5deg"
+             }}
           />
-          <Image
-            src={Molecule2}
+          <motion.img
+            src={Molecule2.src}
             alt="Molecule"
             width={360}
-            className="absolute -right-[410px] -top-[39px] scale-x-[-1] -rotate-[75deg]"
+            className="absolute -right-[410px] -top-[39px] scale-x-[-1]"
+            style={{ translateY, rotate: "-75deg" }}
           />
         </div>
         <div className="flex gap-4 mt-10 justify-center">
