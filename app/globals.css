@@ -92,7 +92,7 @@ body {
 }
 
 @layer components {
-  .btn {
+  /* .btn {
     @apply px-4 py-2 rounded-lg font-medium inline-flex items-center justify-center
   }
 
@@ -102,10 +102,10 @@ body {
 
   .btn-text {
     @apply text-black bg-transparent
-  }
+  } */
 
   .banner-image {
-    @apply h-14 w-auto grayscale
+    @apply h-10 w-auto grayscale
   }
 
   .section-title {

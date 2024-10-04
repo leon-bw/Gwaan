@@ -66,7 +66,7 @@ const Footer = () => {
             <Linkedin02Icon />
           </Link>
         </div>
-        <div className="lg:flex lg:items-center lg:justify-between lg:max-w-screen-lg mx-auto">
+        <div className="lg:flex lg:items-center lg:justify-between lg:max-w-screen-xl mx-auto">
           <p>Eclectic Systems Ltd {currentYear}</p>
           <Link href="/">
             <Image
