@@ -24,7 +24,7 @@ const contents = [
 const Cards = () => {
   return (
     <section className="bg-seaSalt py-24">
-      <div className="container px-4 mx-auto max-w-screen-xl lg:px-10">
+      <div className="container px-6 mx-auto max-w-screen-xl md:px-10">
         <div className="section-heading">
           <h2 className="section-title pb-5">Smart fitness, Simplified</h2>
           <p className="section-description mt-5">
