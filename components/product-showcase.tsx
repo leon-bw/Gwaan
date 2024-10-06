@@ -10,10 +10,11 @@ const ProductShowcase = () => {
               A more effective way to track progress
             </h2>
             <p className="section-description mt-5">
-              Forget checking your form in the mirror or losing track of your
-              reps. Our AI solution analyses your movements in real-time,
-              providing instant feedback so you can focus on what really matters
-              and maximize your results!
+              Forget checking your form in the mirror or losing track of reps.
+              Our AI solution uses your phone’s selfie camera to analyse each
+              movement in real-time, counting your reps and providing instant
+              feedback on your form so you can focus on what really matters and
+              maximize your results!
             </p>
           </div>
           <Product />
