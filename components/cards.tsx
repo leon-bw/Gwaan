@@ -36,9 +36,9 @@ const Cards = () => {
           {contents.map((content, index) => (
             <Card
               key={index}
-              className="p-4 shadow-sm hover:scale-105 shadow-night/30 transition duration-300 lg:min-h-80"
+              className="p-4 shadow-sm hover:scale-105 shadow-night/30 transition duration-300 lg:min-h-64"
             >
-              <CardContent className="pt-6">
+              <CardContent className="p-2 md:p-6">
                 <div className="flex flex-col items-center gap-6 text-center justify-evenly w-full">
                   <content.icon color="seaGreen" size={36} />
                   <CardTitle className="text-lg font-bold text-night/70">
