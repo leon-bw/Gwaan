@@ -1,4 +1,21 @@
+import Image from "next/image";
+import Link from "next/link";
+import Desk from "@/assets/desk.png";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardTitle } from "@/components/ui/card";
+import { CircleArrowRight01Icon } from "hugeicons-react";
 
+const posts = [
+  {
+    category: "Guides",
+    date: "15th March 2023",
+    link: "/blog/remote-working-and-exercise",
+    title: "Remote working and exercise",
+    image: Desk,
+    summary:
+      "Remote working has enabled people to work from home and avoid the daily commute. As useful as it has been, it has also taken a huge toll on our collective physical fitness.\nWhy did it all change?\nBefore the pandemic, many people had a daily routine that included walking or cycling to work, climbing stairs, and moving around the office.",
+  },
+];
 
 const Blog = () => {
   return (
@@ -15,6 +32,47 @@ const Blog = () => {
               workout partner and the passion fueling smarter workouts every
               step of the way.
             </p>
+          </div>
+          <div className="mt-20 grid grid-cols-1 md:grid-cols-2 gap-8">
+            {[...posts, ...posts].map((post, index) => (
+              <Card
+                key={index}
+                className="bg-night/50 text-white p-4 border-night/60 shadow-md my-1 rounded-xl"
+              >
+                <div className="hover:border-white">
+                  <Image
+                    src={post.image}
+                    alt=""
+                    className="rounded-md mb-6 border-seaSalt/70 border-2 z-20"
+                  />
+                </div>
+                <CardContent className="p-0 text-left md:p-2">
+                  <div className="flex justify-between mb-4">
+                    <p className="text-sm">{post.date}</p>
+                    <p className="bg-white text-night/80 rounded-full p-1 font-semibold text-xs uppercase">
+                      {post.category}
+                    </p>
+                  </div>
+                  <div className="">
+                    <CardTitle className="text-xl">{post.title}</CardTitle>
+                  </div>
+                  <p className="pt-6 mb-6 line-clamp-3">{post.summary}</p>
+                  <div className="flex items-center justify-between">
+                    <Link href={post.link}>
+                      <Button
+                        variant={"ghost"}
+                        className="p-0 hover:underline hover:text-white hover:bg-transparent"
+                      >
+                        Read More
+                      </Button>
+                    </Link>
+                    <Link href={post.link}>
+                      <CircleArrowRight01Icon className="hover:bg-white/30 size-10 p-2 rounded-full" />
+                    </Link>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
