@@ -1,21 +1,48 @@
 import Image from "next/image";
 import Link from "next/link";
 import Desk from "@/assets/desk.png";
+import Photo from "@/assets/group_photo.png";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardTitle } from "@/components/ui/card";
 import { CircleArrowRight01Icon } from "hugeicons-react";
 
+type posts = {
+  category: string | null;
+  date: Date;
+  image: string;
+  title: string;
+  summary: string;
+  author: {
+    name: string;
+    role: string;
+  };
+};
+
+const generateSlug = (title: string) => {
+  return title.toLowerCase().replace(/\s+/g, "-");
+};
+
 const posts = [
   {
+    category: "",
+    date: new Date("02/01/2023"),
+    image: Photo,
+    title: "Inclusive Innovation",
+    summary:
+      "Our founder, Pearce, was invited to explore how we can better encourage diversity in technology, and encourage minority groups to innovate. See the full article here.\nWhat does it mean to make innovation more inclusive?\nMany corporations are fascinated that I do not look like the conventional stereotype of a scientist;",
+  },
+  {
     category: "Guides",
-    date: "15th March 2023",
-    link: "/blog/remote-working-and-exercise",
-    title: "Remote working and exercise",
+    date: new Date("03/15/2023"),
     image: Desk,
+    title: "Remote working and exercise",
     summary:
       "Remote working has enabled people to work from home and avoid the daily commute. As useful as it has been, it has also taken a huge toll on our collective physical fitness.\nWhy did it all change?\nBefore the pandemic, many people had a daily routine that included walking or cycling to work, climbing stairs, and moving around the office.",
   },
-];
+].map((post) => ({
+  ...post,
+  link: `/blog/${generateSlug(post.title)}`,
+}));
 
 const Blog = () => {
   return (
@@ -48,10 +75,18 @@ const Blog = () => {
                 </div>
                 <CardContent className="p-0 text-left md:p-2">
                   <div className="flex justify-between mb-4">
-                    <p className="text-sm">{post.date}</p>
-                    <p className="bg-white text-night/80 rounded-full p-1 font-semibold text-xs uppercase">
-                      {post.category}
+                    <p className="text-sm">
+                      {post.date.toLocaleDateString("en-GB", {
+                        day: "numeric",
+                        month: "short",
+                        year: "numeric",
+                      })}
                     </p>
+                    {post.category && (
+                      <p className="bg-white text-night/80 rounded-full p-1 font-semibold text-xs uppercase">
+                        {post.category}
+                      </p>
+                    )}
                   </div>
                   <div className="">
                     <CardTitle className="text-xl">{post.title}</CardTitle>
