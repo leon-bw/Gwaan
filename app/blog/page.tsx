@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Desk from "@/assets/desk.png";
 import Photo from "@/assets/group_photo.png";
+import Team from "@/assets/team_photo.png";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardTitle } from "@/components/ui/card";
 import { CircleArrowRight01Icon } from "hugeicons-react";
@@ -24,12 +25,12 @@ const generateSlug = (title: string) => {
 
 const posts = [
   {
-    category: "",
-    date: new Date("02/01/2023"),
-    image: Photo,
-    title: "Inclusive Innovation",
+    category: "Editorial",
+    date: new Date("03/20/2023"),
+    image: Team,
+    title: "Our journey",
     summary:
-      "Our founder, Pearce, was invited to explore how we can better encourage diversity in technology, and encourage minority groups to innovate. See the full article here.\nWhat does it mean to make innovation more inclusive?\nMany corporations are fascinated that I do not look like the conventional stereotype of a scientist;",
+      "Laboni, our co-founder, reflects back on how our fitness application, Gwaan, came to be.\nHow was the business born?\nDuring lockdown, Pearce and I were struggling to see results, or stay motivated ,with our at-home workouts. The fitness tracker wasn't accurately capturing our progress, and - despite the movements",
   },
   {
     category: "Guides",
@@ -38,6 +39,14 @@ const posts = [
     title: "Remote working and exercise",
     summary:
       "Remote working has enabled people to work from home and avoid the daily commute. As useful as it has been, it has also taken a huge toll on our collective physical fitness.\nWhy did it all change?\nBefore the pandemic, many people had a daily routine that included walking or cycling to work, climbing stairs, and moving around the office.",
+  },
+  {
+    category: "",
+    date: new Date("02/01/2023"),
+    image: Photo,
+    title: "Inclusive Innovation",
+    summary:
+      "Our founder, Pearce, was invited to explore how we can better encourage diversity in technology, and encourage minority groups to innovate. See the full article here.\nWhat does it mean to make innovation more inclusive?\nMany corporations are fascinated that I do not look like the conventional stereotype of a scientist;",
   },
 ].map((post) => ({
   ...post,
@@ -60,8 +69,8 @@ const Blog = () => {
               step of the way.
             </p>
           </div>
-          <div className="mt-20 grid grid-cols-1 md:grid-cols-2 gap-8">
-            {[...posts, ...posts].map((post, index) => (
+          <div className="mt-40 grid grid-cols-1 md:grid-cols-2 gap-8">
+            {posts.map((post, index) => (
               <Card
                 key={index}
                 className="bg-night/50 text-white p-4 border-night/60 shadow-md my-1 rounded-xl"
@@ -83,7 +92,7 @@ const Blog = () => {
                       })}
                     </p>
                     {post.category && (
-                      <p className="bg-white text-night/80 rounded-full p-1 font-semibold text-xs uppercase">
+                      <p className="bg-white/30 text-white/90 rounded-md p-1 md:px-2 font-bold text-xs uppercase">
                         {post.category}
                       </p>
                     )}
