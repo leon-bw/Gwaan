@@ -14,8 +14,8 @@ const routes = [
     label: "Home",
   },
   {
-    href: "/trainers",
-    label: "Trainers",
+    href: "/partner",
+    label: "Partner with Us",
   },
   {
     href: "/blog",

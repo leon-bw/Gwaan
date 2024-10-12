@@ -36,7 +36,7 @@ const Cards = () => {
           {contents.map((content, index) => (
             <Card
               key={index}
-              className="p-4 shadow-sm hover:scale-105 shadow-night/30 transition duration-300 lg:min-h-64"
+              className="p-4 hover:scale-105 hover:shadow-night/20 hover:drop-shadow-lg transition duration-300 lg:min-h-64"
             >
               <CardContent className="p-2 md:p-6">
                 <div className="flex flex-col items-center gap-6 text-center justify-evenly w-full">

@@ -13,11 +13,11 @@ const Hero = () => {
               Beta version coming soon
             </div>
             <h1 className="text-5xl md:text-7xl font-bold tracking-tighter bg-gradient-to-b from-white to-seaGreen text-transparent bg-clip-text mt-6">
-              AI Powered <br/> Fitness
+              AI Powered <br /> Fitness
             </h1>
             <p className="text-xl text-white tracking-tight mt-6">
-              Creator-driven movement gamification for a fuss-free form and rep
-              monitoring home workout!
+              Creator-driven movement tracking that makes form and rep
+              monitoring simple—perfect for home workouts!
             </p>
             <div className="flex gap-4 items-center mt-8 flex-wrap">
               <Button
