@@ -24,8 +24,8 @@ const Footer = () => {
             </Link>
           </div>
           <nav className="flex flex-col gap-4 mt-6 md:flex-row md:justify-center md:gap-8 lg:mt-0">
-            <Link href="/trainers" className="hover:underline">
-              Trainers
+            <Link href="/partner" className="hover:underline">
+              Partner with Us
             </Link>
             <Link href="/blog" className="hover:underline">
               Blog
