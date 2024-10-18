@@ -35,7 +35,7 @@ const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
   const router = useRouter();
-  const isMobile = useMedia("(max-width: 1024px)", false);
+  const isMobile = useMedia("(max-width: 1023px)", false);
 
   const onClick = (href: string) => {
     router.push(href);
