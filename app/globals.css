@@ -113,7 +113,7 @@ body {
   }
 
   .section-description {
-    @apply text-center text-lg tracking-tight leading-8 text-night
+    @apply text-center text-lg tracking-tight leading-8 text-night mt-5
   }
 
   .section-heading {

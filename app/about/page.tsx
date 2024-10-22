@@ -6,6 +6,7 @@ import { CheckmarkBadge02Icon } from "hugeicons-react";
 import photo01 from "@/assets/pearce.png";
 import photo02 from "@/assets/laboni.png";
 import photo03 from "@/assets/lj.png";
+import { useState } from "react";
 
 const contents = [
   {
@@ -38,16 +39,18 @@ const team = [
   },
   {
     image: photo03,
-    name: "Lj",
+    name: "LJ",
     position: "Lead Trainer",
   },
 ];
 
 const About = () => {
+  const [showOverlay, setShowOverlay] = useState(true);
+
   return (
     <>
       <section className="section-bg">
-        <div className="section-container">
+        <div className="section-container md:pt-24">
           <div className="section-heading">
             <div className="flex flex-col items-center gap-8">
               <h1 className="text-5xl md:text-7xl font-bold tracking-tighter bg-gradient-to-b from-white to-seaGreen text-transparent bg-clip-text mt-6 text-center">
@@ -75,7 +78,7 @@ const About = () => {
               limits.
             </p>
           </div>
-          <div className="flex flex-col items-center gap-6 mt-8 lg:flex-row lg:gap-8 lg:mt-12">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-8 lg:gap-8 lg:mt-12">
             {contents.map((content, index) => (
               <Card
                 key={index}
@@ -93,23 +96,28 @@ const About = () => {
               </Card>
             ))}
           </div>
-          <div className="pt-12">
+          <div className="pt-24">
             <div className="section-heading">
               <h3 className="section-title pb-4">The Team Behind the Vision</h3>
             </div>
-            <div className="flex justify-center items-center p-4">
+            <div className="flex justify-center items-center p-4 mt-12">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 {team.map((member, index) => (
                   <Card
                     key={index}
-                    className="hover:scale-105 hover:shadow-night/20 hover:drop-shadow-lg transition duration-300 max-w-[280px] md:max-w-[320px] lg:max-w-[400px]"
+                    className="relative overflow-hidden hover:scale-105 hover:shadow-night/20 hover:drop-shadow-lg transition duration-300 max-w-[280px] md:max-w-[320px] lg:max-w-[400px] rounded-e-xl"
                   >
                     <CardContent className="p-0">
                       <div className="flex flex-col items-start w-full hover:text-seaGreen">
+                        {showOverlay && (
+                          <div className="absolute inset-0 z-10 flex justify-center items-center">
+                            <div className="absolute bg-night/50 h-full w-full" />
+                          </div>
+                        )}
                         <Image
                           src={member.image}
                           alt="Gwaan team member"
-                          className="grayscale hover:grayscale-0 transition duration-300 rounded-t-md"
+                          className="transition duration-300 rounded-t-md"
                         />
                         <div className="flex flex-col gap-1 p-4 justify-center">
                           <CardTitle className="text-lg font-semibold text-night/70">

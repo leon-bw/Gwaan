@@ -54,7 +54,7 @@ const Partner = () => {
               <Image src={Money} alt="Hand holding money" />
             </div>
           </div>
-          <div className="flex flex-col items-center lg:flex-row-reverse lg:gap-20 justify-center mt-8 lg:mt-24">
+          <div className="flex flex-col items-center lg:flex-row-reverse lg:gap-20 justify-center mt-8 xl:mt-24">
             <div className="section-heading mx-0">
               <h3 className="section-title pb-4 md:mt-8">
                 Smarter Insights for Better Results
