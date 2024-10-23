@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ChevronRight } from "lucide-react";
-import RobotImage from "@/assets/robot_with_artificial_intelligence.png";
+import RobotImage from "@/public/images/robot_with_artificial_intelligence.png";
 import Image from "next/image";
 
 const Hero = () => {

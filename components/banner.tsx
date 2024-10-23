@@ -1,12 +1,12 @@
 "use client";
 
 import Image from "next/image";
-import IUKLogo from "@/assets/UKRI_IUK-Logo.png";
-import MSFoundersLogo from "@/assets/MS_Startups_FH_logo.png";
-import BarclaysLogo from "@/assets/Barclays-ELs.png";
-import BSALogo from "@/assets/BSA Logo_Colour_PNG.png";
-import CampusLogo from "@/assets/campusfounders.png";
-import D11ZLogo from "@/assets/D11Z_Logo.png";
+import IUKLogo from "@/public/images/logos/UKRI_IUK-Logo.png";
+import MSFoundersLogo from "@/public/images/logos/MS_Startups_FH_logo.png";
+import BarclaysLogo from "@/public/images/logos/Barclays-ELs.png";
+import BSALogo from "@/public/images/logos/BSA Logo_Colour_PNG.png";
+import CampusLogo from "@/public/images/logos/campusfounders.png";
+import D11ZLogo from "@/public/images/logos/D11Z_Logo.png";
 import { motion } from "framer-motion";
 
 const logos = [

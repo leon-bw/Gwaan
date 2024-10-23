@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import Logo from "@/assets/Gwaan_logo.png";
+import Logo from "@/public/images/logos/Gwaan_logo.png";
 
 const HeaderLogo = () => {
   return (

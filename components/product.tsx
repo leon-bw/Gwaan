@@ -1,4 +1,4 @@
-import workout from "@/assets/exercise_session_short.gif";
+import workout from "@/public/images/exercise_session_short.gif";
 import Image from "next/image";
 
 const Product = () => {
@@ -9,7 +9,7 @@ const Product = () => {
       <div className="h-[46px] w-[3px] bg-gray-800 absolute -start-[17px] top-[178px] rounded-s-lg"></div>
       <div className="h-[64px] w-[3px] bg-gray-800 absolute -end-[17px] top-[142px] rounded-e-lg"></div>
       <div className="rounded-[2rem] overflow-hidden w-[313px] h-[558px] bg-white dark:bg-gray-800">
-        <Image src={workout} alt="Phone showing workout using Gwaan AI" />
+        <Image src={workout} alt="Phone showing workout using Gwaan AI" priority />
       </div>
     </div>
   );

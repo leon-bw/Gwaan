@@ -3,8 +3,8 @@
 import React from "react";
 import { Button } from "./ui/button";
 import { ChevronRight } from "lucide-react";
-import Molecule from "@/assets/molecule.png";
-import Molecule2 from "@/assets/molecule_2.png";
+import Molecule from "@/public/images/molecule.png";
+import Molecule2 from "@/public/images/molecule_2.png";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 

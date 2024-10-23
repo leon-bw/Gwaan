@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import Desk from "@/assets/desk.png";
-import Photo from "@/assets/group_photo.png";
-import Team from "@/assets/team_photo.png";
+import Desk from "@/public/images/photos/desk.png";
+import Photo from "@/public/images/photos/group_photo.png";
+import Team from "@/public/images/photos/team_photo.png";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardTitle } from "@/components/ui/card";
 import { CircleArrowRight01Icon } from "hugeicons-react";

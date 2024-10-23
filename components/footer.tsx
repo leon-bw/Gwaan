@@ -4,7 +4,7 @@ import { NewTwitterIcon } from "hugeicons-react";
 import { InstagramIcon } from "hugeicons-react";
 import { Linkedin02Icon } from "hugeicons-react";
 import { TiktokIcon } from "hugeicons-react";
-import GwaanLogo from "@/assets/gwaan_logo_colour.png";
+import GwaanLogo from "@/public/images/logos/gwaan_logo_colour.png";
 
 const Footer = () => {
   const currentYear: number = new Date().getFullYear();
