@@ -72,7 +72,7 @@ const Navigation = () => {
         </SheetTrigger>
         <SheetContent side="right" className="px-6 bg-night border-none pt-8">
           <SheetTitle>
-            <HeaderLogo />
+            <HeaderLogo onClick={() => setIsOpen(false)} />
           </SheetTitle>
           <nav className="flex flex-col gap-y-4 pt-12">
             {routes.map((route) => {
