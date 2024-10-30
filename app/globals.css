@@ -113,7 +113,7 @@ body {
   }
 
   .section-description {
-    @apply text-center text-lg tracking-tight leading-8 text-night mt-5
+    @apply text-center text-lg tracking-tight leading-8 text-night
   }
 
   .section-heading {
@@ -130,6 +130,14 @@ body {
 
   .section-bg {
     @apply bg-[radial-gradient(ellipse_200%_100%_at_bottom_center,#318741,#141414_40%)] overflow-x-clip
+  }
+
+  .input-text {
+    @apply bg-white/10 border-none 
+  }
+
+  .input-label {
+    @apply text-white/80 font-bold !important
   }
 
 }

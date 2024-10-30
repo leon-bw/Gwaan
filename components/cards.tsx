@@ -44,7 +44,7 @@ const Cards = () => {
                   <CardTitle className="text-lg font-bold text-night/70">
                     {content.heading}
                   </CardTitle>
-                  <p>{content.text}</p>
+                  <p className="text-balance">{content.text}</p>
                 </div>
               </CardContent>
             </Card>
