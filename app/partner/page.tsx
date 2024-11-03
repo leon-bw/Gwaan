@@ -9,7 +9,7 @@ const Partner = () => {
     <>
       <section className="section-bg">
         <div className="section-container md:pt-24">
-          <div className="section-heading gap-4 h-[375px]">
+          <div className="section-heading gap-4">
             <div className="flex flex-col items-center gap-8">
               <h1 className="text-5xl md:text-7xl font-bold tracking-tighter bg-gradient-to-b from-white to-seaGreen text-transparent bg-clip-text mt-6 text-center">
                 Shape the Future of Fitness with Us

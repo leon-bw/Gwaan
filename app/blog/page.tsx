@@ -6,7 +6,7 @@ import Photo from "@/public/images/photos/group_photo.png";
 import Team from "@/public/images/photos/team_photo.png";
 import { Card, CardContent, CardTitle } from "@/components/ui/card";
 import { ArrowRight01Icon } from "hugeicons-react";
-import { easeIn, motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 type posts = {
   category: string | null;
@@ -29,25 +29,25 @@ const posts = [
     category: "Editorial",
     date: new Date("03/20/2023"),
     image: Team,
-    title: "Our journey",
+    title: "How Gwaan Came to Be",
     summary:
-      "Laboni, our co-founder, reflects back on how our fitness application, Gwaan, came to be.\nHow was the business born?\nDuring lockdown, Pearce and I were struggling to see results, or stay motivated, with our at-home workouts. The fitness tracker wasn't accurately capturing our progress, and - despite the movements",
+      "Co-founder Laboni shares the origin story of Gwaan, a fitness app inspired by the need for accurate home workout tracking during lockdown. Starting as a lighthearted idea, the app evolved into a real tool powered by computer vision, created with her husband, Pearce. Reflecting on the journey, Laboni discusses the challenges and growth experienced in the startup world, as well as the commitment required to turn an idea into a full-fledged product.",
   },
   {
     category: "Guides",
     date: new Date("03/15/2023"),
     image: Desk,
-    title: "Remote working and exercise",
+    title: "Impact of Remote Work on Fitness",
     summary:
-      "Remote working has enabled people to work from home and avoid the daily commute. As useful as it has been, it has also taken a huge toll on our collective physical fitness.\nWhy did it all change?\nBefore the pandemic, many people had a daily routine that included walking or cycling to work, climbing stairs, and moving around the office.",
+      "We examine the decline in physical activity due to remote work and the impact on overall fitness. It highlights how the loss of daily physical routines, such as commuting, has led to more sedentary lifestyles. It also offers tips for incorporating movement into the workday, like scheduling exercise breaks, using standing desks, and opting for active errands, to combat the negative effects of prolonged sitting.",
   },
   {
     category: "",
     date: new Date("02/01/2023"),
     image: Photo,
-    title: "Inclusive Innovation",
+    title: "Fostering Diversity and Innovation in Tech",
     summary:
-      "Our founder, Pearce, was invited to explore how we can better encourage diversity in technology, and encourage minority groups to innovate. See the full article here.\nWhat does it mean to make innovation more inclusive?\nMany corporations are fascinated that I do not look like the conventional stereotype of a scientist;",
+      "Founder Pearce discusses his unconventional path into technology and the importance of promoting diversity in the industry. He reflects on the barriers faced by underrepresented groups and offers three actionable strategies to support diverse talent in tech. The article also shares Gwaan’s commitment to inclusivity, collaborating with organizations to make the tech space more accessible and inspiring for future innovators.",
   },
 ].map((post) => ({
   ...post,
@@ -61,7 +61,7 @@ const Blog = () => {
         <div className="section-container md:pt-24">
           <div className="section-heading">
             <div className="flex flex-col items-center gap-8">
-              <h1 className="text-5xl md:text-7xl font-bold tracking-tighter bg-gradient-to-b from-white to-seaGreen text-transparent bg-clip-text mt-6 text-center">
+              <h1 className="text-5xl md:text-7xl font-bold tracking-tighter bg-gradient-to-b from-white to-seaGreen text-transparent bg-clip-text mt-6 text-center pb-5">
                 Our Story so far...
               </h1>
               <p className="section-description text-white">
@@ -76,17 +76,18 @@ const Blog = () => {
       </section>
       <section className="bg-seaSalt">
         <div className="section-container">
-          <div className="mt-5 md:mt-20 grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-10">
+          <div className="mt-5 md:mt-20 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 lg:gap-14">
             {posts.map((post, index) => (
               <motion.div
+                key={post.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.5 }}
-                transition={{ duration: 0.5, ease: easeIn }}
+                transition={{ duration: 0.5, ease: "easeIn" }}
               >
                 <Card
                   key={index}
-                  className="bg-white text-night p-6 hover:-translate-y-1 hover:-rotate-1 hover:shadow-night/20 hover:drop-shadow-lg transition duration-300 my-1 rounded-lg group"
+                  className="bg-white text-night p-6 hover:-translate-y-1 hover:-rotate-1 hover:shadow-night/20 hover:drop-shadow-lg transition duration-300 my-1 rounded-lg md:min-h-[457px] group"
                 >
                   <Link href={post.link}>
                     <Image
@@ -98,7 +99,7 @@ const Blog = () => {
                   </Link>
                   <CardContent className="p-0 text-left">
                     <div className="flex flex-col gap-4">
-                      <CardTitle className="text-seaGreen text-xl capitalize">
+                      <CardTitle className="text-seaGreen text-xl capitalize line-clamp-2 overflow-hidden">
                         {post.title}
                       </CardTitle>
                       <p className="mb-3 line-clamp-3">{post.summary}</p>

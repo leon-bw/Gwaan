@@ -10,7 +10,7 @@ const HeaderLogo = ({ onClick }: HeaderLogoProps) => {
   return (
     <Link href="/" onClick={onClick}>
       <div className="w-16 items-center lg:flex lg:w-24">
-        <Image src={Logo} alt="Gwaan Logo" />
+        <Image src={Logo} alt="Gwaan Logo" priority />
       </div>
     </Link>
   );

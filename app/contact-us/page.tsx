@@ -17,6 +17,8 @@ import { CircleArrowRight01Icon } from "hugeicons-react";
 import Image from "next/image";
 import Chatbot from "@/public/images/robot_chatbot.png";
 import CTA from "@/components/call-to-action";
+import { useState } from "react";
+import { Loader2 } from "lucide-react";
 
 const formSchema = z.object({
   name: z.string(),
@@ -26,6 +28,8 @@ const formSchema = z.object({
 });
 
 const ContactUs = () => {
+  const [isLoading, setIsLoading] = useState(false);
+
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -36,8 +40,19 @@ const ContactUs = () => {
     },
   });
 
-  const handleSubmit = (values: z.infer<typeof formSchema>) => {
-    console.log(values);
+  const handleSubmit = async (values: z.infer<typeof formSchema>) => {
+    setIsLoading(true);
+
+    try {
+      setTimeout(() => {
+        console.log("Message sent:", values);
+      }, 3000);
+    } catch (error) {
+      console.log(error)
+
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -155,10 +170,20 @@ const ContactUs = () => {
                 <Button
                   type="submit"
                   variant={"secondary"}
+                  disabled={isLoading}
                   className="w-full gap-2 font-semibold hover:bg-seaGreen hover:text-white transition duration-300 mt-2 py-6"
                 >
-                  Send Message
-                  <CircleArrowRight01Icon className="w-4" />
+                  {isLoading ? (
+                    <>
+                      <Loader2 size={20} className="animate-spin" />
+                      Sending...
+                    </>
+                  ) : (
+                    <>
+                      Send Message
+                      <CircleArrowRight01Icon className="w-4" />
+                    </>
+                  )}
                 </Button>
               </form>
             </Form>
