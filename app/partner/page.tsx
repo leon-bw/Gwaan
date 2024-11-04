@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import CTA from "@/components/call-to-action";
 import Money from "@/public/images/hand_holding_money.png";
 import Analytics from "@/public/images/data_analysis_monitor.png";
 
@@ -81,7 +80,6 @@ const Partner = () => {
             </div>
           </div>
         </div>
-        <CTA />
       </section>
     </>
   );
