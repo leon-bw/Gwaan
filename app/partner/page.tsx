@@ -1,4 +1,5 @@
 import Image from "next/image";
+import PageHeader from "@/components/page-header";
 import { Button } from "@/components/ui/button";
 import Money from "@/public/images/hand_holding_money.png";
 import Analytics from "@/public/images/data_analysis_monitor.png";
@@ -6,28 +7,18 @@ import Analytics from "@/public/images/data_analysis_monitor.png";
 const Partner = () => {
   return (
     <>
-      <section className="section-bg">
-        <div className="section-container md:pt-24">
-          <div className="section-heading gap-4">
-            <div className="flex flex-col items-center gap-8">
-              <h1 className="text-5xl md:text-7xl font-bold tracking-tighter bg-gradient-to-b from-white to-seaGreen text-transparent bg-clip-text mt-6 text-center">
-                Shape the Future of Fitness with Us
-              </h1>
-              <p className="section-description text-white">
-                Empower your clients and boost your income by partnering with
-                our innovative AI platform, designed to make every rep count.
-              </p>
-              <Button
-                size="lg"
-                variant="secondary"
-                className="font-semibold bg-white text-black hover:bg-white/30 hover:border-seaGreen hover:text-white transition duration-300"
-              >
-                Start Earning
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
+      <PageHeader
+        title="Shape the Future of Fitness with Us"
+        description="Empower your clients and boost your income by partnering with our innovative AI platform, designed to make every rep count."
+      >
+        <Button
+          size="lg"
+          variant="secondary"
+          className="font-semibold bg-white text-black hover:bg-white/30 hover:border-seaGreen hover:text-white transition duration-300"
+        >
+          Start Earning
+        </Button>
+      </PageHeader>
       <section className="bg-seaSalt overflow-x-clip">
         <div className="section-container lg:py-24">
           <div className="flex flex-col items-center lg:flex-row lg:gap-20 justify-center mt-8 md:mt-0">

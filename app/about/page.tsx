@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import PageHeader from "@/components/page-header";
 import { Card, CardContent, CardTitle } from "@/components/ui/card";
 import { UserGroupIcon } from "hugeicons-react";
 import { Layers01Icon } from "hugeicons-react";
@@ -55,21 +56,10 @@ const team = [
 const About = () => {
   return (
     <>
-      <section className="section-bg">
-        <div className="section-container md:pt-24">
-          <div className="section-heading">
-            <div className="flex flex-col items-center gap-8">
-              <h1 className="text-5xl md:text-7xl font-bold tracking-tighter bg-gradient-to-b from-white to-seaGreen text-transparent bg-clip-text mt-6 text-center">
-                Empowering Fitness for All
-              </h1>
-              <p className="section-description text-white">
-                Gwaan means 'Go on' in Jamaican Patois, an invitation to push
-                forward in true island spirit.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <PageHeader
+        title="Empowering Fitness for All"
+        description="Gwaan means 'Go on' in Jamaican Patois, an invitation to push forward in true island spirit."
+      />
       <article className="bg-seaSalt">
         <div className="section-container lg:py-24">
           <div className="section-heading">
@@ -123,7 +113,7 @@ const About = () => {
                   >
                     <CardContent className="p-0">
                       <div className="flex flex-col items-start w-full">
-                        <div className="relative overflow-hidden transition duration-500">
+                        <div className="relative overflow-hidden transition duration-300">
                           <div className="absolute inset-0 z-10 bg-night/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                             <div className="h-full w-full flex items-center justify-center text-center translate-y-[50%] group-hover:translate-y-0 duration-300">
                               <p className="text-white text-md lg:text-lg italic font-semibold p-6 text-center">

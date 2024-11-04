@@ -5,6 +5,7 @@ import Desk from "@/public/images/photos/desk.png";
 import Photo from "@/public/images/photos/group_photo.png";
 import Team from "@/public/images/photos/team_photo.png";
 import { Card, CardContent, CardTitle } from "@/components/ui/card";
+import PageHeader from "@/components/page-header";
 import { ArrowRight01Icon } from "hugeicons-react";
 import { motion } from "framer-motion";
 
@@ -54,23 +55,10 @@ const posts = [
 const Blog = () => {
   return (
     <>
-      <section className="section-bg">
-        <div className="section-container md:pt-24">
-          <div className="section-heading">
-            <div className="flex flex-col items-center gap-8">
-              <h1 className="text-5xl md:text-7xl font-bold tracking-tighter bg-gradient-to-b from-white to-seaGreen text-transparent bg-clip-text mt-6 text-center pb-5">
-                Our Story so far...
-              </h1>
-              <p className="section-description text-white">
-                Follow our journey from start-up to a growing community, get the
-                latest updates exploring the innovation behind your new go-to
-                workout partner and the passion fueling smarter workouts every
-                step of the way.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <PageHeader
+        title="Our Story so far..."
+        description="Follow our journey from start-up to a growing community, get the latest updates exploring the innovation behind your new go-to workout partner and the passion fueling smarter workouts every step of the way."
+      />
       <section className="bg-seaSalt">
         <div className="section-container">
           <div className="mt-5 md:mt-20 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 lg:gap-14">

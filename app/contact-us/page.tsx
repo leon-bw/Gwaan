@@ -1,18 +1,18 @@
 "use client";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
+import Image from "next/image";
 import { Form } from "@/components/ui/form";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { ArrowRight01Icon } from "hugeicons-react";
-import Image from "next/image";
-import Chatbot from "@/public/images/robot_chatbot.png";
-import { useState } from "react";
-import { Loader2 } from "lucide-react";
 import FormFieldItem from "@/components/form-field-item";
+import PageHeader from "@/components/page-header";
+import Chatbot from "@/public/images/robot_chatbot.png";
+import { ArrowRight01Icon } from "hugeicons-react";
+import { Loader2 } from "lucide-react";
 import { contactFormSchema } from "@/lib/utils";
-
 
 const ContactUs = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -43,21 +43,10 @@ const ContactUs = () => {
 
   return (
     <>
-      <section className="section-bg">
-        <div className="section-container md:pt-24">
-          <div className="section-heading">
-            <div className="flex flex-col items-center gap-8">
-              <h1 className="text-5xl md:text-7xl font-bold tracking-tighter bg-gradient-to-b from-white to-seaGreen text-transparent bg-clip-text mt-6 text-center">
-                Contact Us
-              </h1>
-              <p className="section-description text-white">
-                Have questions or feedback? Your journey is our mission, and
-                we’re all about progress—get in touch with us today!
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <PageHeader
+        title="Contact Us"
+        description="Have questions or feedback? Your journey is our mission, and we’re all about progress—get in touch with us today!"
+      />
       <div className="bg-seaSalt">
         <div className="section-container lg:py-24">
           <h2 className="section-title pb-6 lg:mb-5">
