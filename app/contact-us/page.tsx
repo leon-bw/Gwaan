@@ -11,28 +11,23 @@ import Chatbot from "@/public/images/robot_chatbot.png";
 import { useState } from "react";
 import { Loader2 } from "lucide-react";
 import FormFieldItem from "@/components/form-field-item";
+import { contactFormSchema } from "@/lib/utils";
 
-const formSchema = z.object({
-  name: z.string(),
-  subject: z.string().min(5),
-  email: z.string().email(),
-  message: z.string().max(2000),
-});
 
 const ContactUs = () => {
   const [isLoading, setIsLoading] = useState(false);
 
-  const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema),
+  const form = useForm<z.infer<typeof contactFormSchema>>({
+    resolver: zodResolver(contactFormSchema),
     defaultValues: {
-      email: "",
-      subject: "",
       name: "",
+      subject: "",
+      email: "",
       message: "",
     },
   });
 
-  const handleSubmit = async (values: z.infer<typeof formSchema>) => {
+  const handleSubmit = async (values: z.infer<typeof contactFormSchema>) => {
     setIsLoading(true);
 
     try {
