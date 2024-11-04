@@ -14,10 +14,7 @@ type posts = {
   image: string;
   title: string;
   summary: string;
-  author: {
-    name: string;
-    role: string;
-  };
+  author: string;
 };
 
 const generateSlug = (title: string) => {
@@ -109,7 +106,7 @@ const Blog = () => {
                           className="text-night font-bold text-center rounded-lg py-3 flex items-center justify-start group-hover:scale-105 transition duration-300"
                         >
                           Read More
-                          <ArrowRight01Icon className="group-hover:translate-x-3 rounded-xl transition duration-300 ml-2" />
+                          <ArrowRight01Icon className="group-hover:translate-x-3 transition duration-300 ml-2" />
                         </Link>
                         {post.category && (
                           <span className="bg-night/20 text-night rounded-lg p-1 px-2 font-bold text-[10px] uppercase ml-auto">

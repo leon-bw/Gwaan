@@ -8,10 +8,6 @@ const NotFound = () => {
   return (
     <section className="bg-night">
       <div className="section-container">
-        <div
-          className="bg-repeat bg-[url('/images/stars-stroke-rounded.svg')] bg-cover text-white"
-          style={{ backgroundSize: "12px 12px" }}
-        ></div>
         <div className="section-heading">
           <div className="grid grid-cols-1 gap-8 text-center mb-8">
             <h1 className="section-title text-white">Oops! Page Not Found</h1>
@@ -28,7 +24,7 @@ const NotFound = () => {
             </Link>
           </div>
         </div>
-        <div className="grid grid-cols-1 max-w-xl mx-auto my-32 background-image: url('public/images/stars-stroke-rounded.svg');">
+        <div className="grid grid-cols-1 max-w-xl mx-auto my-28">
           <motion.img
             src={Rocket.src}
             alt="Rocket"

@@ -5,7 +5,7 @@ import { useForm } from "react-hook-form";
 import { Form } from "@/components/ui/form";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { CircleArrowRight01Icon } from "hugeicons-react";
+import { ArrowRight01Icon } from "hugeicons-react";
 import Image from "next/image";
 import Chatbot from "@/public/images/robot_chatbot.png";
 import { useState } from "react";
@@ -120,7 +120,7 @@ const ContactUs = () => {
                       ) : (
                         <>
                           Send Message
-                          <CircleArrowRight01Icon className="w-4" />
+                          <ArrowRight01Icon className="w-6" />
                         </>
                       )}
                     </Button>
