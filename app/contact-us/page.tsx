@@ -1,25 +1,16 @@
 "use client";
-import * as z from "zod";
+import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
-import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
+import { Form } from "@/components/ui/form";
 import { Button } from "@/components/ui/button";
-import { Textarea } from "@/components/ui/textarea";
 import { Card } from "@/components/ui/card";
 import { CircleArrowRight01Icon } from "hugeicons-react";
 import Image from "next/image";
 import Chatbot from "@/public/images/robot_chatbot.png";
-import CTA from "@/components/call-to-action";
 import { useState } from "react";
 import { Loader2 } from "lucide-react";
+import FormFieldItem from "@/components/form-field-item";
 
 const formSchema = z.object({
   name: z.string(),
@@ -92,88 +83,33 @@ const ContactUs = () => {
                     onSubmit={form.handleSubmit(handleSubmit)}
                     className="w-full flex flex-col gap-4 group text-night"
                   >
-                    <FormField
+                    <FormFieldItem
                       control={form.control}
                       name="name"
-                      render={({ field }) => {
-                        return (
-                          <FormItem>
-                            <FormLabel className="input-label">Name</FormLabel>
-                            <FormControl>
-                              <Input
-                                className="bg-white/10 border-night/40 focus:border-black"
-                                type="text"
-                                placeholder="Name"
-                                {...field}
-                              />
-                            </FormControl>
-                            <FormMessage />
-                          </FormItem>
-                        );
-                      }}
+                      label="Name"
+                      type="text"
+                      placeholder="Name"
                     />
-                    <FormField
+                    <FormFieldItem
                       control={form.control}
                       name="subject"
-                      render={({ field }) => {
-                        return (
-                          <FormItem>
-                            <FormLabel className="input-label">
-                              Subject
-                            </FormLabel>
-                            <FormControl>
-                              <Input
-                                className="bg-white/10 border-night/40 focus:border-black"
-                                type="text"
-                                placeholder="Subject"
-                                {...field}
-                              />
-                            </FormControl>
-                            <FormMessage />
-                          </FormItem>
-                        );
-                      }}
+                      label="Subject"
+                      type="text"
+                      placeholder="Subject"
                     />
-                    <FormField
+                    <FormFieldItem
                       control={form.control}
                       name="email"
-                      render={({ field }) => {
-                        return (
-                          <FormItem>
-                            <FormLabel className="input-label">Email</FormLabel>
-                            <FormControl>
-                              <Input
-                                className="bg-white/10 border-night/40 focus:border-black"
-                                type="email"
-                                placeholder="Email"
-                                {...field}
-                              />
-                            </FormControl>
-                            <FormMessage />
-                          </FormItem>
-                        );
-                      }}
+                      label="Email"
+                      type="email"
+                      placeholder="Email"
                     />
-                    <FormField
+                    <FormFieldItem
                       control={form.control}
                       name="message"
-                      render={({ field }) => {
-                        return (
-                          <FormItem>
-                            <FormLabel className="input-label">
-                              Message
-                            </FormLabel>
-                            <FormControl>
-                              <Textarea
-                                placeholder="What would you like to tell us"
-                                className="resize-none bg-white/10 h-72 border-night/40 focus:border-black"
-                                {...field}
-                              />
-                            </FormControl>
-                            <FormMessage />
-                          </FormItem>
-                        );
-                      }}
+                      label="Message"
+                      type="textarea"
+                      placeholder="What would you like to tell us?"
                     />
                     <Button
                       type="submit"
@@ -200,7 +136,6 @@ const ContactUs = () => {
           </div>
         </div>
       </div>
-      <CTA />
     </>
   );
 };
