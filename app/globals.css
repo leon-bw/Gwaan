@@ -137,7 +137,7 @@ body {
   }
 
   .input-label {
-    @apply text-white/80 font-bold !important
+    @apply text-night font-bold !important
   }
 
 }

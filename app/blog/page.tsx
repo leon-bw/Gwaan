@@ -89,19 +89,19 @@ const Blog = () => {
                   key={index}
                   className="bg-white text-night p-6 hover:-translate-y-1 hover:-rotate-1 hover:shadow-night/20 hover:drop-shadow-lg transition duration-300 my-1 rounded-lg md:min-h-[457px] group"
                 >
-                  <Link href={post.link}>
-                    <Image
-                      src={post.image}
-                      alt="blog post image"
-                      className="rounded-md mb-4"
-                      priority
-                    />
-                  </Link>
+                  <Image
+                    src={post.image}
+                    alt="blog post image"
+                    className="rounded-md mb-4"
+                    priority
+                  />
                   <CardContent className="p-0 text-left">
                     <div className="flex flex-col gap-4">
-                      <CardTitle className="text-seaGreen text-xl capitalize line-clamp-2 overflow-hidden">
-                        {post.title}
-                      </CardTitle>
+                      <Link href={post.link} className="mr-auto">
+                        <CardTitle className="text-seaGreen text-xl capitalize line-clamp-2 overflow-hidden hover:text-gwaanGreen transition duration-300">
+                          {post.title}
+                        </CardTitle>
+                      </Link>
                       <p className="mb-3 line-clamp-3">{post.summary}</p>
                       <div className="flex items-center">
                         <Link
