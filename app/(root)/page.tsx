@@ -1,7 +1,7 @@
-import Hero from "@/components/hero";
-import Banner from "@/components/banner";
-import ProductShowcase from "@/components/product-showcase";
-import Cards from "@/components/cards";
+import Hero from "@/components/Hero";
+import Banner from "@/components/Banner";
+import ProductShowcase from "@/components/ProductShowcase";
+import Cards from "@/components/Cards";
 
 const Home = () => {
   return (

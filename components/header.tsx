@@ -1,5 +1,5 @@
-import HeaderLogo from "./header-logo";
-import Navigation from "./navigation";
+import HeaderLogo from "./HeaderLogo";
+import Navigation from "./Navigation";
 
 const Header = () => {
   return (

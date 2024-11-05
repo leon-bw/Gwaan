@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import PageHeader from "@/components/page-header";
+import PageHeader from "@/components/PageHeader";
 import { Card, CardContent, CardTitle } from "@/components/ui/card";
 import { UserGroupIcon } from "hugeicons-react";
 import { Layers01Icon } from "hugeicons-react";

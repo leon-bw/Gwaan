@@ -5,7 +5,7 @@ import Desk from "@/public/images/photos/desk.png";
 import Photo from "@/public/images/photos/group_photo.png";
 import Team from "@/public/images/photos/team_photo.png";
 import { Card, CardContent, CardTitle } from "@/components/ui/card";
-import PageHeader from "@/components/page-header";
+import PageHeader from "@/components/PageHeader";
 import { ArrowRight01Icon } from "hugeicons-react";
 import { motion } from "framer-motion";
 

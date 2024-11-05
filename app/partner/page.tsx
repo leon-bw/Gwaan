@@ -1,5 +1,5 @@
 import Image from "next/image";
-import PageHeader from "@/components/page-header";
+import PageHeader from "@/components/PageHeader";
 import { Button } from "@/components/ui/button";
 import Money from "@/public/images/hand_holding_money.png";
 import Analytics from "@/public/images/data_analysis_monitor.png";

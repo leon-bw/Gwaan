@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { useMedia } from "react-use";
 import { usePathname, useRouter } from "next/navigation";
-import NavButton from "@/components/navbutton";
+import NavButton from "@/components/NavButton";
 import { Button } from "@/components/ui/button";
 import {
   Sheet,
@@ -11,7 +11,7 @@ import {
   SheetTrigger,
   SheetTitle,
 } from "@/components/ui/sheet";
-import HeaderLogo from "@/components/header-logo";
+import HeaderLogo from "@/components/HeaderLogo";
 import { Menu } from "lucide-react";
 import { Home11Icon } from "hugeicons-react";
 import { Agreement02Icon } from "hugeicons-react";

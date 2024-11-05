@@ -1,5 +1,5 @@
 "use client";
-import Product from "@/components/product";
+import Product from "@/components/Product";
 import { motion } from "framer-motion";
 
 const ProductShowcase = () => {
