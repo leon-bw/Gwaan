@@ -21,8 +21,9 @@ const ContactUs = () => {
     resolver: zodResolver(contactFormSchema),
     defaultValues: {
       name: "",
-      subject: "",
       email: "",
+      reason: "",
+      subject: "",
       message: "",
     },
   });
@@ -76,17 +77,24 @@ const ContactUs = () => {
                     />
                     <FormFieldItem
                       control={form.control}
-                      name="subject"
-                      label="Subject"
-                      type="text"
-                      placeholder="Subject"
-                    />
-                    <FormFieldItem
-                      control={form.control}
                       name="email"
                       label="Email"
                       type="email"
                       placeholder="Email"
+                    />
+                    <FormFieldItem
+                      control={form.control}
+                      name="reason"
+                      label="Reason for contact"
+                      type="Select"
+                      placeholder="Select a reason"
+                    />
+                    <FormFieldItem
+                      control={form.control}
+                      name="subject"
+                      label="Subject"
+                      type="text"
+                      placeholder="Subject"
                     />
                     <FormFieldItem
                       control={form.control}
@@ -99,7 +107,7 @@ const ContactUs = () => {
                       type="submit"
                       variant={"default"}
                       disabled={isLoading}
-                      className="bg-seaGreen w-full gap-2 font-semibold hover:bg-gwaanGreen transition duration-300 mt-2 py-6"
+                      className="bg-seaGreen w-full gap-2 font-semibold hover:bg-gwaanGreen transition duration-300 mt-2 py-6 group"
                     >
                       {isLoading ? (
                         <>
@@ -108,8 +116,8 @@ const ContactUs = () => {
                         </>
                       ) : (
                         <>
-                          Send Message
-                          <ArrowRight01Icon className="w-6" />
+                          Get in Touch
+                          <ArrowRight01Icon className="w-6 group-hover:translate-x-3 transition duration-300" />
                         </>
                       )}
                     </Button>

@@ -6,6 +6,13 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Control, FieldPath } from "react-hook-form";
@@ -35,15 +42,34 @@ const FormFieldItem = ({
           <FormItem>
             <FormLabel className="input-label">{label}</FormLabel>
             <FormControl>
-              {type === "textarea" ? (
+              {name === "reason" ? (
+                <Select
+                  onValueChange={field.onChange}
+                  defaultValue={field.value}
+                >
+                  <SelectTrigger className="bg-white border-night/20">
+                    <SelectValue placeholder={placeholder} />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="General Inquiry">
+                      General Inquiry
+                    </SelectItem>
+                    <SelectItem value="Feedback">Feedback</SelectItem>
+                    <SelectItem value="Technical Support">
+                      Technical Support
+                    </SelectItem>
+                    <SelectItem value="Collaboration">Collaboration</SelectItem>
+                  </SelectContent>
+                </Select>
+              ) : type === "textarea" ? (
                 <Textarea
-                  className="resize-none bg-white/10 h-72 border-night/40 focus:border-black"
+                  className="resize-none h-72 bg-night/10 focus:border-black/50"
                   placeholder={placeholder}
                   {...field}
                 />
               ) : (
                 <Input
-                  className="bg-white/10 border-night/40 focus:border-black"
+                  className="bg-night/10 focus:border-black/50"
                   type={type}
                   placeholder={placeholder}
                   {...field}
