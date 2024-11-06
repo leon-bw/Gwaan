@@ -27,7 +27,7 @@ const posts = [
     category: "Editorial",
     date: new Date("03/20/2023"),
     image: Team,
-    title: "How Gwaan Came to Be",
+    title: "Our Journey: How Gwaan Came to Be",
     summary:
       "Co-founder Laboni shares the origin story of Gwaan, a fitness app inspired by the need for accurate home workout tracking during lockdown. Starting as a lighthearted idea, the app evolved into a real tool powered by computer vision, created with her husband, Pearce. Reflecting on the journey, Laboni discusses the challenges and growth experienced in the startup world, as well as the commitment required to turn an idea into a full-fledged product.",
   },
@@ -47,7 +47,8 @@ const posts = [
     summary:
       "Founder Pearce discusses his unconventional path into technology and the importance of promoting diversity in the industry. He reflects on the barriers faced by underrepresented groups and offers three actionable strategies to support diverse talent in tech. The article also shares Gwaan’s commitment to inclusivity, collaborating with organizations to make the tech space more accessible and inspiring for future innovators.",
   },
-].map((post) => ({
+]
+.map((post) => ({
   ...post,
   link: `/blog/${generateSlug(post.title)}`,
 }));
@@ -61,7 +62,7 @@ const Blog = () => {
       />
       <section className="bg-seaSalt">
         <div className="section-container">
-          <div className="mt-5 md:mt-20 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 lg:gap-14">
+          <div className="mt-5 md:mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10 lg:gap-14">
             {posts.map((post, index) => (
               <motion.div
                 key={post.title}
@@ -72,7 +73,7 @@ const Blog = () => {
               >
                 <Card
                   key={index}
-                  className="bg-white text-night p-6 hover:-translate-y-1 hover:-rotate-1 hover:shadow-night/20 hover:drop-shadow-lg transition duration-300 my-1 rounded-lg md:min-h-[457px] group"
+                  className="bg-white text-night p-6 hover:-translate-y-1 hover:-rotate-1 hover:shadow-night/20 hover:drop-shadow-lg transition duration-300 my-1 rounded-lg group"
                 >
                   <Image
                     src={post.image}

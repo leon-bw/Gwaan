@@ -1,23 +1,22 @@
 "use client";
-import { Card, CardContent, CardTitle } from "@/components/ui/card";
-import { CircleCheckBig } from "lucide-react";
-import { TrendingUp } from "lucide-react";
-import { History } from "lucide-react";
-import { motion } from "framer-motion";
+import CardItem from "@/components/CardItem";
+import { TimeQuarterPassIcon } from "hugeicons-react";
+import { CheckmarkCircle03Icon } from "hugeicons-react";
+import { BodyPartMuscleIcon } from "hugeicons-react";
 
 const contents = [
   {
-    icon: History,
+    icon: TimeQuarterPassIcon,
     heading: "Train Anytime, No Gear Required",
     text: "Workout anywhere using just your phone’s front camera, no equipment needed. Let AI take care of the tracking, so you can focus on results.",
   },
   {
-    icon: CircleCheckBig,
+    icon: CheckmarkCircle03Icon,
     heading: "Real-Time Feedback, Every Rep",
     text: "Take control of your form with instant, feedback. Get corrections as you move, making every rep count towards your fitness goals.",
   },
   {
-    icon: TrendingUp,
+    icon: BodyPartMuscleIcon,
     heading: "Track Your Progress, See Gains",
     text: "Earn points for every perfectly executed rep and improve your form over time. Take your performance and fitness to the next level.",
   },
@@ -36,32 +35,12 @@ const Cards = () => {
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-8 lg:gap-8 lg:mt-12">
           {contents.map((item, index) => (
-            <motion.div
+            <CardItem
               key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.5 }}
-              transition={{ duration: 0.5, ease: "easeIn" }}
-            >
-              <Card
-                key={index}
-                className="p-4 hover:scale-105 hover:shadow-night/20 hover:drop-shadow-lg transition duration-300 group"
-              >
-                <CardContent className="p-2 md:p-6">
-                  <div className="flex flex-col items-center gap-6 text-center justify-evenly w-full">
-                    <item.icon
-                      color="seaGreen"
-                      size={36}
-                      className="group-hover:text-gwaanGreen transition duration-300"
-                    />
-                    <CardTitle className="text-lg font-bold text-night/70">
-                      {item.heading}
-                    </CardTitle>
-                    <p className="text-balance">{item.text}</p>
-                  </div>
-                </CardContent>
-              </Card>
-            </motion.div>
+              icon={item.icon}
+              heading={item.heading}
+              text={item.text}
+            />
           ))}
         </div>
       </div>
