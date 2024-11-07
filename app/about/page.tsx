@@ -1,15 +1,15 @@
-"use client";
-
 import Image from "next/image";
 import PageHeader from "@/components/PageHeader";
+import CardItem from "@/components/CardItem";
 import { Card, CardContent, CardTitle } from "@/components/ui/card";
-import { UserGroupIcon } from "hugeicons-react";
-import { Layers01Icon } from "hugeicons-react";
-import { CheckmarkBadge02Icon } from "hugeicons-react";
+import {
+  UserGroupIcon,
+  Layers01Icon,
+  CheckmarkBadge02Icon,
+} from "hugeicons-react";
 import photo01 from "@/public/images/photos/pearce.png";
 import photo02 from "@/public/images/photos/laboni.png";
 import photo03 from "@/public/images/photos/lj.png";
-import { motion } from "framer-motion";
 
 const contents = [
   {
@@ -76,28 +76,12 @@ const About = () => {
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-8 lg:gap-8 lg:mt-12">
             {contents.map((item, index) => (
-              <motion.div
+              <CardItem
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.5 }}
-                transition={{ duration: 0.5, ease: "easeIn" }}
-              >
-                <Card
-                  key={index}
-                  className="p-4 hover:scale-105 hover:shadow-night/20 hover:drop-shadow-lg transition duration-300 lg:min-h-64"
-                >
-                  <CardContent className="p-2 md:p-6">
-                    <div className="flex flex-col items-center gap-6 text-center justify-evenly w-full">
-                      <item.icon color="seaGreen" size={36} />
-                      <CardTitle className="text-lg font-bold text-night/70">
-                        {item.heading}
-                      </CardTitle>
-                      <p className="text-balance">{item.text}</p>
-                    </div>
-                  </CardContent>
-                </Card>
-              </motion.div>
+                icon={item.icon}
+                heading={item.heading}
+                text={item.text}
+              />
             ))}
           </div>
           <div className="pt-24">

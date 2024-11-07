@@ -1,4 +1,3 @@
-"use client";
 import CardItem from "@/components/CardItem";
 import { TimeQuarterPassIcon } from "hugeicons-react";
 import { CheckmarkCircle03Icon } from "hugeicons-react";

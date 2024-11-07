@@ -2,7 +2,7 @@
 
 import React from "react";
 import { Button } from "./ui/button";
-import { ChevronRight } from "lucide-react";
+import { ArrowRight01Icon } from "hugeicons-react";
 import Molecule from "@/public/images/molecule.png";
 import Molecule2 from "@/public/images/molecule_2.png";
 import { motion, useScroll, useTransform } from "framer-motion";
@@ -62,7 +62,7 @@ const CallToAction = () => {
             variant="ghost"
             className=" text-white hover:bg-white/30 hover:text-white font-semibold py-6 gap-1 transition"
           >
-            Learn more <ChevronRight size={16} />
+            Learn more <ArrowRight01Icon size={24} />
           </Button>
         </div>
       </div>

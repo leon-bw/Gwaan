@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ChevronRight } from "lucide-react";
+import { ArrowRight01Icon } from "hugeicons-react";
 import RobotImage from "@/public/images/robot_with_artificial_intelligence.png";
 import Image from "next/image";
 
@@ -32,7 +32,7 @@ const Hero = () => {
                 variant="ghost"
                 className=" text-white hover:bg-white/30 hover:text-white font-semibold py-6 gap-1 transition duration-300"
               >
-                Learn more <ChevronRight size={16} />
+                Learn more <ArrowRight01Icon size={24} />
               </Button>
             </div>
           </div>

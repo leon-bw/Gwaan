@@ -66,7 +66,7 @@ const ContactUs = () => {
                 <Form {...form}>
                   <form
                     onSubmit={form.handleSubmit(handleSubmit)}
-                    className="w-full flex flex-col gap-4 group text-night"
+                    className="w-full flex flex-col gap-4 text-night"
                   >
                     <FormFieldItem
                       control={form.control}

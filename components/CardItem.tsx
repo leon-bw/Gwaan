@@ -1,6 +1,5 @@
-"use client";
+import FadeInAnimation from "@/components/FadeInAnimation";
 import { Card, CardContent, CardTitle } from "@/components/ui/card";
-import { motion } from "framer-motion";
 import { HugeiconsProps } from "hugeicons-react";
 
 type CardItemProps = {
@@ -11,12 +10,7 @@ type CardItemProps = {
 
 const CardItem = ({ icon: Icon, heading, text }: CardItemProps) => {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.5 }}
-      transition={{ duration: 0.5, ease: "easeIn" }}
-    >
+    <FadeInAnimation>
       <Card className="p-4 hover:scale-105 hover:shadow-night/20 hover:drop-shadow-lg transition duration-300 group">
         <CardContent className="p-2 md:p-6">
           <div className="flex flex-col items-center gap-6 text-center justify-evenly w-full">
@@ -28,7 +22,7 @@ const CardItem = ({ icon: Icon, heading, text }: CardItemProps) => {
           </div>
         </CardContent>
       </Card>
-    </motion.div>
+    </FadeInAnimation>
   );
 };
 

@@ -14,7 +14,7 @@ type posts = {
   date: Date;
   image: string;
   title: string;
-  summary: string;
+  description: string;
   author: string;
 };
 
@@ -28,7 +28,7 @@ const posts = [
     date: new Date("03/20/2023"),
     image: Team,
     title: "Our Journey: How Gwaan Came to Be",
-    summary:
+    description:
       "Co-founder Laboni shares the origin story of Gwaan, a fitness app inspired by the need for accurate home workout tracking during lockdown. Starting as a lighthearted idea, the app evolved into a real tool powered by computer vision, created with her husband, Pearce. Reflecting on the journey, Laboni discusses the challenges and growth experienced in the startup world, as well as the commitment required to turn an idea into a full-fledged product.",
   },
   {
@@ -36,7 +36,7 @@ const posts = [
     date: new Date("03/15/2023"),
     image: Desk,
     title: "Impact of Remote Work on Fitness",
-    summary:
+    description:
       "We examine the decline in physical activity due to remote work and the impact on overall fitness. It highlights how the loss of daily physical routines, such as commuting, has led to more sedentary lifestyles. It also offers tips for incorporating movement into the workday, like scheduling exercise breaks, using standing desks, and opting for active errands, to combat the negative effects of prolonged sitting.",
   },
   {
@@ -44,7 +44,7 @@ const posts = [
     date: new Date("02/01/2023"),
     image: Photo,
     title: "Fostering Diversity and Innovation in Tech",
-    summary:
+    description:
       "Founder Pearce discusses his unconventional path into technology and the importance of promoting diversity in the industry. He reflects on the barriers faced by underrepresented groups and offers three actionable strategies to support diverse talent in tech. The article also shares Gwaan’s commitment to inclusivity, collaborating with organizations to make the tech space more accessible and inspiring for future innovators.",
   },
 ]
@@ -84,11 +84,11 @@ const Blog = () => {
                   <CardContent className="p-0 text-left">
                     <div className="flex flex-col gap-4">
                       <Link href={post.link} className="mr-auto">
-                        <CardTitle className="text-seaGreen text-xl capitalize line-clamp-2 overflow-hidden hover:text-gwaanGreen transition duration-300">
+                        <CardTitle className="text-seaGreen text-xl capitalize line-clamp-2 overflow-hidden hover:text-gwaanGreen hover:underline transition duration-300">
                           {post.title}
                         </CardTitle>
                       </Link>
-                      <p className="mb-3 line-clamp-3">{post.summary}</p>
+                      <p className="mb-3 line-clamp-3">{post.description}</p>
                       <div className="flex items-center">
                         <Link
                           href={post.link}
