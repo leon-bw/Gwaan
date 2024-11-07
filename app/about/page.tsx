@@ -59,7 +59,7 @@ const About = () => {
         title="Empowering Fitness for All"
         description="Gwaan means 'Go on' in Jamaican Patois, an invitation to push forward in true island spirit."
       />
-      <article className="bg-seaSalt">
+      <section className="bg-seaSalt">
         <div className="section-container lg:py-24">
           <div className="section-heading">
             <h2 className="section-title pb-4">
@@ -102,7 +102,7 @@ const About = () => {
             </div>
           </div>
         </div>
-      </article>
+      </section>
     </>
   );
 };
