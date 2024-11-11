@@ -20,6 +20,8 @@ model BlogPost {
   author    String?
   image     String
   tags      Tag[]    @relation("PostTags")
+  
+  @@index(slug)
 }
 
 model Tag {

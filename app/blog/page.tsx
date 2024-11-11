@@ -1,44 +1,17 @@
 import PageHeader from "@/components/PageHeader";
 import BlogCard from "@/components/BlogCard";
-import Desk from "@/public/images/photos/desk.png";
-import Photo from "@/public/images/photos/group_photo.png";
-import Team from "@/public/images/photos/team_photo.png";
+import prisma from "@/lib/db";
 
-const generateSlug = (title: string) => {
-  return title.toLowerCase().replace(/\s+/g, "-");
-};
+const Blog = async () => {
+  const blogPosts = await prisma.blogPost.findMany({
+    orderBy: {
+      createdAt: "desc",
+    },
+    include: {
+      tags: true,
+    },
+  });
 
-const posts = [
-  {
-    category: "Editorial",
-    date: "03/20/2023",
-    image: Team,
-    title: "Our Journey: How Gwaan Came to Be",
-    description:
-      "Co-founder Laboni shares the origin story of Gwaan, a fitness app inspired by the need for accurate home workout tracking during lockdown. Starting as a lighthearted idea, the app evolved into a real tool powered by computer vision, created with her husband, Pearce. Reflecting on the journey, Laboni discusses the challenges and growth experienced in the startup world, as well as the commitment required to turn an idea into a full-fledged product.",
-  },
-  {
-    category: "Guides",
-    date: "03/15/2023",
-    image: Desk,
-    title: "Impact of Remote Work on Fitness",
-    description:
-      "We examine the decline in physical activity due to remote work and the impact on overall fitness. It highlights how the loss of daily physical routines, such as commuting, has led to more sedentary lifestyles. It also offers tips for incorporating movement into the workday, like scheduling exercise breaks, using standing desks, and opting for active errands, to combat the negative effects of prolonged sitting.",
-  },
-  {
-    category: "",
-    date: "02/01/2023",
-    image: Photo,
-    title: "Fostering Diversity and Innovation in Tech",
-    description:
-      "Founder Pearce discusses his unconventional path into technology and the importance of promoting diversity in the industry. He reflects on the barriers faced by underrepresented groups and offers three actionable strategies to support diverse talent in tech. The article also shares Gwaan’s commitment to inclusivity, collaborating with organizations to make the tech space more accessible and inspiring for future innovators.",
-  },
-].map((post) => ({
-  ...post,
-  link: `/blog/${generateSlug(post.title)}`,
-}));
-
-const Blog = () => {
   return (
     <>
       <PageHeader
@@ -47,9 +20,9 @@ const Blog = () => {
       />
       <section className="bg-seaSalt">
         <div className="section-container">
-          <div className="mt-5 md:mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10 lg:gap-14">
-            {posts.map((post) => (
-              <BlogCard key={post.title} post={post} />
+          <div className="mt-5 md:my-20 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 lg:gap-14">
+            {blogPosts.map((post) => (
+              <BlogCard key={post.id} post={post} />
             ))}
           </div>
         </div>
