@@ -5,7 +5,6 @@ import PageHeader from "@/components/PageHeader";
 import { notFound } from "next/navigation";
 
 const BlogPost = async ({ params }: { params: { slug: string } }) => {
-
   const post = await prisma.blogPost.findUnique({
     where: {
       slug: params.slug,
@@ -26,18 +25,25 @@ const BlogPost = async ({ params }: { params: { slug: string } }) => {
     day: "numeric",
   });
 
-  const subheading = `${formatDate} - ${post.tags
-    ?.map((tag) => tag.name)
-    .join(", ")}`;
+  const tags = post.tags?.map((tag) => tag.name).join(", ");
 
   return (
     <>
-      <div>
-        <PageHeader title={post.title} description={subheading} />
-        <h1 className="capitalize">{post.title}</h1>
-        <Image src={post.image} alt={post.title} width={662} height={400} />
-        <p>{post.content}</p>
-      </div>
+      <PageHeader title={post.title} description={formatDate}>
+        <div className="text-center">
+          {tags && <span className="text-white uppercase text-xs">{tags}</span>}
+        </div>
+      </PageHeader>
+      <section className="section-container lg:py-24">
+        <Image
+          src={post.image}
+          alt={post.title}
+          width={662}
+          height={400}
+          className="mx-auto rounded-md"
+        />
+        <p className="mt-8 md:mt-16">{post.content}</p>
+      </section>
     </>
   );
 };

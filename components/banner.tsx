@@ -20,33 +20,31 @@ const logos = [
 
 const Banner = () => {
   return (
-    <section className="py-6 md:py-10 bg-seaSalt">
-      <div className="container max-w-screen-xl mx-auto">
-        <div className="flex overflow-hidden [mask-image:linear-gradient(to_right,transparent,black,transparent)]">
-          <motion.div
-            className="flex gap-20 flex-none pr-20"
-            animate={{
-              translateX: "-50%",
-            }}
-            transition={{
-              duration: 25,
-              repeat: Infinity,
-              ease: "linear",
-              repeatType: "loop",
-              repeatDelay: 0,
-            }}
-          >
-            {[...logos, ...logos].map((logo, index) => (
-              <Image
-                key={index}
-                src={logo.src}
-                alt={logo.alt}
-                height={300}
-                className="banner-image"
-              />
-            ))}
-          </motion.div>
-        </div>
+    <section className="container py-6 md:py-10 max-w-screen-xl mx-auto">
+      <div className="flex overflow-hidden [mask-image:linear-gradient(to_right,transparent,black,transparent)]">
+        <motion.div
+          className="flex gap-20 flex-none pr-20"
+          animate={{
+            translateX: "-50%",
+          }}
+          transition={{
+            duration: 25,
+            repeat: Infinity,
+            ease: "linear",
+            repeatType: "loop",
+            repeatDelay: 0,
+          }}
+        >
+          {[...logos, ...logos].map((logo, index) => (
+            <Image
+              key={index}
+              src={logo.src}
+              alt={logo.alt}
+              height={300}
+              className="banner-image"
+            />
+          ))}
+        </motion.div>
       </div>
     </section>
   );

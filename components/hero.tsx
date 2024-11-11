@@ -23,7 +23,7 @@ const Hero = () => {
               <Button
                 size="lg"
                 variant="secondary"
-                className="font-semibold bg-white text-black hover:bg-white/30 hover:border-seaGreen hover:text-white transition duration-300"
+                className="font-semibold bg-white hover:bg-white/30 hover:border-seaGreen hover:text-white transition duration-300"
               >
                 Get Early Access
               </Button>

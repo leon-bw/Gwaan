@@ -2,7 +2,7 @@ import Product from "@/components/Product";
 
 const ProductShowcase = () => {
   return (
-    <section className="bg-seaSalt py-24">
+    <section className="py-24">
       <div className="container px-4 lg:px-10 mx-auto max-w-screen-xl">
         <div className="lg:flex lg:items-center lg:flex-row-reverse gap-10">
           <div className="section-heading">

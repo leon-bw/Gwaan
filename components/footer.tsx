@@ -18,6 +18,7 @@ const Footer = () => {
               <Image
                 src={GwaanLogo}
                 height={30}
+                width={30}
                 alt="Gwaan logo"
                 className="lg:hidden"
               />
@@ -73,6 +74,7 @@ const Footer = () => {
               <Image
                 src={GwaanLogo}
                 height={30}
+                width={30}
                 alt="Gwaan logo"
                 className="hidden lg:block"
               />

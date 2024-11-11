@@ -42,7 +42,7 @@ const ContactForm = () => {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(handleSubmit)}
-        className="w-full flex flex-col gap-4 text-night"
+        className="w-full flex flex-col gap-4"
       >
         <FormFieldItem
           control={form.control}
