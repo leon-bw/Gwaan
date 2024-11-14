@@ -1,13 +1,14 @@
 import prisma from "@/lib/db";
 import React from "react";
 import Image from "next/image";
-import PageHeader from "@/components/PageHeader";
 import { notFound } from "next/navigation";
 
 const BlogPost = async ({ params }: { params: { slug: string } }) => {
+  const { slug } = await params;
+
   const post = await prisma.blogPost.findUnique({
     where: {
-      slug: params.slug,
+      slug: slug,
     },
     include: {
       tags: true,
@@ -29,12 +30,22 @@ const BlogPost = async ({ params }: { params: { slug: string } }) => {
 
   return (
     <>
-      <PageHeader title={post.title} description={formatDate}>
-        <div className="text-center">
-          {tags && <span className="text-white uppercase text-xs">{tags}</span>}
+      <section className="section-bg">
+        <div className="section-container">
+          <div className="section-heading text-center">
+            <p className="py-4 text-white/50">{formatDate}</p>
+            <h1 className="text-4xl md:text-6xl font-bold tracking-tighter bg-gradient-to-b from-white to-seaGreen text-transparent bg-clip-text my-6 text-center capitalize pb-2 md:pb-6">
+              {post.title}
+            </h1>
+            {tags && (
+              <span className="bg-white/30 rounded-md text-white font-medium uppercase text-xs p-2">
+                {tags}
+              </span>
+            )}
+          </div>
         </div>
-      </PageHeader>
-      <section className="section-container lg:py-24">
+      </section>
+      <div className="section-container md:py-24">
         <Image
           src={post.image}
           alt={post.title}
@@ -42,8 +53,8 @@ const BlogPost = async ({ params }: { params: { slug: string } }) => {
           height={400}
           className="mx-auto rounded-md"
         />
-        <p className="mt-8 md:mt-16">{post.content}</p>
-      </section>
+        <p className="pt-8 md:pt-16 max-w-2xl mx-auto">{post.content}</p>
+      </div>
     </>
   );
 };

@@ -13,7 +13,7 @@ const ContactUs = () => {
       />
       <section className="section-container lg:py-24">
         <h2 className="section-title pb-6 lg:mb-5">
-          What can we help you with?
+          We'd love to hear from you
         </h2>
         <div className="grid grid-cols-1 ">
           <Card className="grid md:grid-cols-2 p-6 transition duration-300 lg:px-10 md:gap-4 lg:gap-6">

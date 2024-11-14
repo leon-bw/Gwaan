@@ -18,7 +18,7 @@ const MemberCard = ({ member }: { member: TeamMember }) => {
           <div className="relative overflow-hidden transition duration-300">
             <div className="absolute inset-0 z-10 bg-night/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
               <div className="h-full w-full flex items-center justify-center text-center translate-y-[50%] group-hover:translate-y-0 duration-300">
-                <p className="text-white text-md lg:text-lg italic font-semibold p-6 text-center">
+                <p className="text-white md:text-sm lg:text-base italic font-semibold p-6 text-center">
                   {member.quote}
                 </p>
               </div>

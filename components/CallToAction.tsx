@@ -4,7 +4,7 @@ import React from "react";
 import { Button } from "./ui/button";
 import { ArrowRight01Icon } from "hugeicons-react";
 import Molecule from "@/public/images/molecule.png";
-import Molecule2 from "@/public/images/molecule_2.png";
+import Molecule2 from "@/public/images/molecule_3.png";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 
@@ -36,16 +36,14 @@ const CallToAction = () => {
             src={Molecule.src}
             alt="Molecule"
             width={360}
-            className="absolute -left-[390px] -top-[157px]"
-            style={{ translateY,
-              rotate: "-5deg"
-             }}
+            className="absolute -left-[390px] -top-[174px]"
+            style={{ translateY, rotate: "-5deg" }}
           />
           <motion.img
             src={Molecule2.src}
             alt="Molecule"
             width={360}
-            className="absolute -right-[410px] -top-[39px] scale-x-[-1]"
+            className="absolute -right-[410px] -top-[56px] scale-x-[-1]"
             style={{ translateY, rotate: "-75deg" }}
           />
         </div>

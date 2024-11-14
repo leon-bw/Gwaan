@@ -10,14 +10,18 @@ import {
   SheetContent,
   SheetTrigger,
   SheetTitle,
+  SheetDescription,
 } from "@/components/ui/sheet";
 import HeaderLogo from "@/components/HeaderLogo";
 import { Menu } from "lucide-react";
-import { Home11Icon } from "hugeicons-react";
-import { Agreement02Icon } from "hugeicons-react";
-import { LicenseDraftIcon } from "hugeicons-react";
-import { InformationCircleIcon } from "hugeicons-react";
-import { MessageMultiple02Icon } from "hugeicons-react";
+import {
+  Home11Icon,
+  Agreement02Icon,
+  LicenseDraftIcon,
+  InformationCircleIcon,
+  MessageMultiple02Icon,
+} from "hugeicons-react";
+import * as VisuallyHidden from "@radix-ui/react-visually-hidden";
 
 const routes = [
   {
@@ -61,7 +65,7 @@ const Navigation = () => {
   if (isMobile) {
     return (
       <Sheet open={isOpen} onOpenChange={setIsOpen}>
-        <SheetTrigger>
+        <SheetTrigger asChild>
           <Button
             variant="outline"
             size="sm"
@@ -74,6 +78,12 @@ const Navigation = () => {
           <SheetTitle>
             <HeaderLogo onClick={() => setIsOpen(false)} />
           </SheetTitle>
+          <VisuallyHidden.Root>
+            <SheetDescription className="pt-4">
+              This navigation menu allows you to navigate through different
+              sections of the website.
+            </SheetDescription>
+          </VisuallyHidden.Root>
           <nav className="flex flex-col gap-y-4 pt-12">
             {routes.map((route) => {
               const NavIcons = route.icon;

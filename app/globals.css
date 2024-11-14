@@ -93,15 +93,15 @@ body {
 
 @layer components {
   /* .btn {
-    @apply px-4 py-2 rounded-lg font-medium inline-flex items-center justify-center
+    @apply px-4 py-6 rounded-lg font-semibold inline-flex items-center justify-center transition duration-300
   }
 
   .btn-primary {
-    @apply bg-white text-black hover:bg-black/20 hover:text-seaGreen
+    @apply bg-white hover:bg-white/30 hover:text-white
   }
 
   .btn-text {
-    @apply text-black bg-transparent
+    @apply text-black bg-transparent gap-1
   } */
 
   .banner-image {
@@ -125,7 +125,7 @@ body {
   }
 
   .section-container {
-    @apply container max-w-screen-xl mx-auto pt-12 pb-20 px-6 lg:px-14 md:pb-10 md:px-10
+    @apply container max-w-screen-xl mx-auto pt-12 pb-16 px-6 lg:px-14 md:pb-10 md:px-10
   }
 
   .section-bg {

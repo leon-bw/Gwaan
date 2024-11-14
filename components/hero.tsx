@@ -41,6 +41,7 @@ const Hero = () => {
               src={RobotImage}
               alt="AI Robot image"
               className="md:absolute md:h-full md:w-auto md:max-w-none md:-left-6 lg:left-0"
+              priority
             />
           </div>
         </div>
