@@ -1,18 +1,58 @@
 import Link from "next/link";
 import Image from "next/image";
-import { NewTwitterIcon } from "hugeicons-react";
-import { InstagramIcon } from "hugeicons-react";
-import { Linkedin02Icon } from "hugeicons-react";
-import { TiktokIcon } from "hugeicons-react";
+import {
+  NewTwitterIcon,
+  InstagramIcon,
+  Linkedin02Icon,
+  TiktokIcon,
+} from "hugeicons-react";
 import GwaanLogo from "@/public/images/logos/gwaan_logo_colour.png";
+
+const routes = [
+  {
+    href: "/partner",
+    label: "Partner with Us",
+  },
+  {
+    href: "/blog",
+    label: "Blog",
+  },
+  {
+    href: "/about",
+    label: "About",
+  },
+  {
+    href: "/contact-us",
+    label: "Contact Us",
+  },
+];
+
+const socialLinks = [
+  {
+    href: "https://twitter.com/gwaanai",
+    icon: NewTwitterIcon,
+  },
+  {
+    href: "https://www.instagram.com/gwaan.ai/?hl=en-gb",
+    icon: InstagramIcon,
+  },
+  {
+    href: "https://www.tiktok.com/@gwaan.ai",
+    icon: TiktokIcon,
+  },
+  {
+    href: "https://www.linkedin.com/company/gwaanai/posts/?feedView=all",
+    icon: Linkedin02Icon,
+  },
+];
 
 const Footer = () => {
   const currentYear: number = new Date().getFullYear();
 
   return (
-    <footer className="bg-night text-seaSalt text-sm py-10 text-center md:pb-6">
-      <div className="container mx-auto">
-        <div className="border-t-2 border-white/20 py-6 mx-5">
+    <footer className="bg-night text-white/50 text-sm py-10 text-center md:pb-6">
+      <div className="container max-w-screen-2xl mx-auto lg:px-14">
+        <div className="border-t-2 border-white/20 pt-6 mx-5 lg:p-1">
           <div className="inline-flex">
             <Link href="/">
               <Image
@@ -24,52 +64,33 @@ const Footer = () => {
               />
             </Link>
           </div>
-          <nav className="flex flex-col gap-4 mt-6 md:flex-row md:justify-center md:gap-8 lg:mt-0">
-            <Link href="/partner" className="hover:underline">
-              Partner with Us
-            </Link>
-            <Link href="/blog" className="hover:underline">
-              Blog
-            </Link>
-            <Link href="/about" className="hover:underline">
-              About
-            </Link>
-            <Link href="/contact" className="hover:underline">
-              Contact Us
-            </Link>
+          <nav className="flex flex-col gap-4 mt-6 md:flex-row md:justify-center md:gap-8 lg:mt-0 lg:flex-col lg:max-w-fit lg:gap-3 lg:text-left">
+            {routes.map(({ href, label }) => (
+              <Link
+                key={href}
+                href={href}
+                className="footer-route"
+              >
+                {label}
+              </Link>
+            ))}
           </nav>
-          <div className="flex justify-center gap-6 py-8 lg:pb-0">
-            <Link
-              href="https://twitter.com/gwaanai"
-              target="_blank"
-              className="social-icon"
-            >
-              <NewTwitterIcon />
-            </Link>
-            <Link
-              href="https://www.instagram.com/gwaan.ai/?hl=en-gb"
-              target="_blank"
-              className="social-icon"
-            >
-              <InstagramIcon />
-            </Link>
-            <Link
-              href="https://www.tiktok.com/@gwaan.ai"
-              target="_blank"
-              className="social-icon"
-            >
-              <TiktokIcon />
-            </Link>
-            <Link
-              href="https://www.linkedin.com/company/gwaanai/posts/?feedView=all"
-              target="_blank"
-              className="social-icon"
-            >
-              <Linkedin02Icon />
-            </Link>
+          <div className="flex justify-center lg:justify-end gap-6 py-6 lg:py-4">
+            {socialLinks.map(({ href, icon }) => {
+              const SocialIcons = icon;
+              return (
+                <Link
+                  key={href}
+                  href={href}
+                  target="_blank"
+                  className="social-icon"
+                >
+                  <SocialIcons />
+                </Link>
+              );
+            })}
           </div>
-          <div className="lg:flex lg:items-center lg:justify-between lg:max-w-screen-xl mx-auto">
-            <p className="text-white/30">Eclectic Systems Ltd {currentYear}</p>
+          <div className="lg:flex lg:items-center lg:justify-between">
             <Link href="/">
               <Image
                 src={GwaanLogo}
@@ -79,6 +100,7 @@ const Footer = () => {
                 className="hidden lg:block"
               />
             </Link>
+            <p className="text-white/30">Eclectic Systems Ltd {currentYear}</p>
           </div>
         </div>
       </div>

@@ -85,18 +85,18 @@ const Navigation = () => {
             </SheetDescription>
           </VisuallyHidden.Root>
           <nav className="flex flex-col gap-y-4 pt-12">
-            {routes.map((route) => {
-              const NavIcons = route.icon;
+            {routes.map(({ href, label, icon }) => {
+              const NavIcons = icon;
               return (
                 <Button
-                  key={route.href}
-                  variant={route.href === pathname ? "primary" : "ghost"}
-                  onClick={() => onClick(route.href)}
+                  key={href}
+                  variant={href === pathname ? "primary" : "ghost"}
+                  onClick={() => onClick(href)}
                   className="w-full text-white hover:bg-black hover:text-white hover:translate-x-2 transition duration-300 font-semibold text-sm justify-start pl-4"
                   size="lg"
                 >
                   <NavIcons className="mr-4" size={24} />
-                  {route.label}
+                  {label}
                 </Button>
               );
             })}
@@ -108,12 +108,12 @@ const Navigation = () => {
 
   return (
     <nav className="hidden lg:flex items-center gap-2 overflow-x-auto">
-      {routes.map((route) => (
+      {routes.map(({ href, label }) => (
         <NavButton
-          key={route.href}
-          href={route.href}
-          label={route.label}
-          isActive={pathname === route.href}
+          key={href}
+          href={href}
+          label={label}
+          isActive={pathname === href}
         />
       ))}
     </nav>
