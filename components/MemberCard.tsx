@@ -32,10 +32,10 @@ const MemberCard = ({ member }: { member: TeamMember }) => {
             />
           </div>
           <div className="flex flex-col gap-1 p-4 justify-center">
-            <CardTitle className="text-lg font-semibold text-night/70">
+            <CardTitle className="text-lg font-semibold text-night">
               {member.name}
             </CardTitle>
-            <p className="group-hover:text-seaGreen">{member.position}</p>
+            <p className="text-night/50">{member.position}</p>
           </div>
         </div>
       </CardContent>

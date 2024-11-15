@@ -7,6 +7,7 @@ import {
   CheckmarkBadge02Icon,
 } from "hugeicons-react";
 import prisma from "@/lib/db";
+import FounderVideo from "@/components/Video";
 
 const cardContent = [
   {
@@ -36,7 +37,8 @@ const About = async () => {
         description="Gwaan means 'Go on' in Jamaican Patois, an invitation to push forward in true island spirit."
       />
       <section className="section-container lg:py-24">
-        <div className="section-heading">
+        <FounderVideo />
+        <div className="section-heading pt-24">
           <h2 className="section-title pb-4">Where Culture Meets Innovation</h2>
           <p className="section-description">
             Founded in Brixton, London’s Caribbean hub, Gwaan combines the
@@ -58,7 +60,7 @@ const About = async () => {
         </div>
         <div className="pt-24">
           <div className="section-heading">
-            <h3 className="section-title pb-4">The Team Behind the Vision</h3>
+            <h2 className="section-title pb-4">The Team Behind the Vision</h2>
           </div>
           <div className="flex justify-center items-center p-4 mt-12">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
