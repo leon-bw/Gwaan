@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import Rocket from "@/public/images/rocket.png";
+import Rocket from "@/public/images/rocket.webp";
 import { motion } from "framer-motion";
 
 const NotFound = () => {

@@ -20,7 +20,6 @@ const ContactForm = () => {
       name: "",
       email: "",
       reason: "",
-      subject: "",
       message: "",
     },
   });
@@ -30,11 +29,10 @@ const ContactForm = () => {
     try {
       setTimeout(() => {
         console.log("Message sent:", values);
+        setIsLoading(false);
       }, 3000);
     } catch (error) {
       console.error("Submission failed:", error);
-    } finally {
-      setIsLoading(false);
     }
   };
 
@@ -67,13 +65,6 @@ const ContactForm = () => {
         />
         <FormFieldItem
           control={form.control}
-          name="subject"
-          label="Subject"
-          type="text"
-          placeholder="Subject"
-        />
-        <FormFieldItem
-          control={form.control}
           name="message"
           label="Message"
           type="textarea"
@@ -93,7 +84,7 @@ const ContactForm = () => {
           ) : (
             <>
               Get in Touch
-              <ArrowRight01Icon className="w-6 group-hover:translate-x-3 transition duration-300" />
+              <ArrowRight01Icon size={24} className="group-hover:translate-x-2 transition duration-300" />
             </>
           )}
         </Button>

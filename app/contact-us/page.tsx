@@ -2,7 +2,7 @@ import Image from "next/image";
 import { Card } from "@/components/ui/card";
 import PageHeader from "@/components/PageHeader";
 import ContactForm from "@/components/ContactForm";
-import Chatbot from "@/public/images/robot_chatbot.png";
+import Chatbot from "@/public/images/robot_chatbot.webp";
 
 const ContactUs = () => {
   return (

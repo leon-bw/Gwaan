@@ -16,6 +16,7 @@ const Product = () => {
             alt="Phone showing workout using Gwaan AI"
             unoptimized
             className="w-[287px] h-auto"
+            priority
           />
         </div>
       </div>

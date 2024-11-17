@@ -1,13 +1,14 @@
+import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { ArrowRight01Icon } from "hugeicons-react";
-import RobotImage from "@/public/images/robot_with_artificial_intelligence.png";
-import Image from "next/image";
+import RobotImage from "@/public/images/robot_with_ai.webp";
 
 const Hero = () => {
   return (
     <section className="bg-[radial-gradient(ellipse_200%_100%_at_bottom_right,#318741,#141414_90%)] overflow-x-clip">
       <div className="container max-w-screen-2xl mx-auto pt-12 pb-20 px-4 lg:px-14 md:pt-5 md:pb-10">
-        <div className="md:flex items-center gap-2">
+        <div className="md:flex items-center gap-5">
           <div className="md:w-[478px]">
             <div className="text-sm text-white inline-flex border border-[#999]/50 px-3 py-1 rounded-lg tracking-tight">
               Beta version coming soon
@@ -28,11 +29,18 @@ const Hero = () => {
                 Get Early Access
               </Button>
               <Button
+                asChild
                 size="default"
                 variant="ghost"
-                className=" text-white hover:bg-white/30 hover:text-white font-semibold py-6 gap-1 transition duration-300"
+                className="text-white hover:bg-white/30 hover:text-white font-semibold py-6 gap-1 transition duration-300 group"
               >
-                Learn more <ArrowRight01Icon size={24} />
+                <Link href={"/about"}>
+                  Learn more
+                  <ArrowRight01Icon
+                    size={24}
+                    className="group-hover:translate-x-2 transition duration-300"
+                  />
+                </Link>
               </Button>
             </div>
           </div>

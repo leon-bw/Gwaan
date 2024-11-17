@@ -1,12 +1,12 @@
 "use client";
 
-import React from "react";
+import React, { useRef } from "react";
+import Link from "next/link";
 import { Button } from "./ui/button";
 import { ArrowRight01Icon } from "hugeicons-react";
 import Molecule from "@/public/images/molecule.png";
 import Molecule2 from "@/public/images/molecule_3.png";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
 
 const CallToAction = () => {
   const sectionRef = useRef(null);
@@ -51,16 +51,23 @@ const CallToAction = () => {
           <Button
             size="lg"
             variant="secondary"
-            className="font-semibold hover:bg-white/30 hover:border-seaGreen hover:text-white transition"
+            className="font-semibold hover:bg-white/30 hover:border-seaGreen hover:text-white transition duration-300"
           >
             Sign Up
           </Button>
           <Button
+            asChild
             size="default"
             variant="ghost"
-            className=" text-white hover:bg-white/30 hover:text-white font-semibold py-6 gap-1 transition"
+            className="text-white hover:bg-white/30 hover:text-white font-semibold py-6 gap-1 transition duration-300 group"
           >
-            Learn more <ArrowRight01Icon size={24} />
+            <Link href={"/about"}>
+              Learn more
+              <ArrowRight01Icon
+                size={24}
+                className="group-hover:translate-x-2 transition duration-300"
+              />
+            </Link>
           </Button>
         </div>
       </div>
