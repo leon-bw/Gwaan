@@ -31,9 +31,18 @@ model Tag {
 }
 
 model Team {
-  id       String     @id @default(cuid())
+  id       String @id @default(cuid())
   name     String
   position String
   image    String
   quote    String
+}
+
+model ContactForm {
+  id        String   @id @default(cuid())
+  name      String
+  email     String
+  reason    String
+  message   String
+  createdAt DateTime @default(now())
 }

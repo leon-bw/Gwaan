@@ -8,7 +8,7 @@ export function cn(...inputs: ClassValue[]) {
 
 export const contactFormSchema = z.object({
   name: z.string().min(2, "Name is required").max(70),
-  email: z.string().email(),
+  email: z.string().email("Invalid email address"),
   reason: z.string().min(1, "Please select a reason"),
   message: z.string().min(10, "Message is required").max(3000),
 });

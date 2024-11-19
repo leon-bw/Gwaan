@@ -52,7 +52,7 @@ const Footer = () => {
   return (
     <footer className="bg-night text-white/50 text-sm py-6 text-center md:pb-6">
       <div className="container max-w-screen-2xl mx-auto px-6 md:px-10 lg:px-14">
-        <div className="bg-white/10 p-4 rounded-xl">
+        <div className="bg-white/10 p-4 lg:py-0 rounded-xl">
           <div className="inline-flex">
             <Link href="/">
               <Image
@@ -66,7 +66,7 @@ const Footer = () => {
           </div>
           <nav className="flex flex-col gap-4 mt-6 md:flex-row md:justify-center md:gap-8 lg:mt-0 lg:flex-col lg:max-w-fit lg:gap-3 lg:text-left">
             <span className="hidden lg:block text-white font-semibold text-sm">
-              Useful Links
+              Main Pages
             </span>
             {footerLinks.map(({ href, label }) => (
               <Link key={href} href={href} className="footer-route">

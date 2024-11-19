@@ -5,14 +5,17 @@ import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { contactFormSchema } from "@/lib/utils";
 import { useForm } from "react-hook-form";
+import { useToast } from "@/hooks/use-toast";
 import { Form } from "@/components/ui/form";
 import { Button } from "@/components/ui/button";
 import FormFieldItem from "@/components/FormFieldItem";
 import { ArrowRight01Icon } from "hugeicons-react";
 import { LoaderCircle } from "lucide-react";
+import { contactFormSubmission } from "@/app/actions/contactFormActions";
 
 const ContactForm = () => {
   const [isLoading, setIsLoading] = useState(false);
+  const { toast } = useToast();
 
   const form = useForm<z.infer<typeof contactFormSchema>>({
     resolver: zodResolver(contactFormSchema),
@@ -26,14 +29,41 @@ const ContactForm = () => {
 
   const handleSubmit = async (values: z.infer<typeof contactFormSchema>) => {
     setIsLoading(true);
-    try {
-      setTimeout(() => {
+    setTimeout(async () => {
+      try {
+        const response = await contactFormSubmission(values);
+
+        if (response?.success) {
+          toast({
+            variant: "confirmed",
+            title: "Message Sent!",
+            description:
+              "Your message has been sent successfully. We’ll get back to you soon.",
+          });
+
+          form.reset();
+        } else {
+          toast({
+            variant: "destructive",
+            title: "Submission Failed",
+            description: "Something went wrong. Please try again later.",
+          });
+        }
+
         console.log("Message sent:", values);
+      } catch (error) {
+        console.error("Submission failed:", error);
+
+        toast({
+          variant: "destructive",
+          title: "Network Error",
+          description:
+            "Unable to submit your message, please check your connection and try again.",
+        });
+      } finally {
         setIsLoading(false);
-      }, 3000);
-    } catch (error) {
-      console.error("Submission failed:", error);
-    }
+      }
+    }, 1000);
   };
 
   return (
@@ -84,7 +114,10 @@ const ContactForm = () => {
           ) : (
             <>
               Get in Touch
-              <ArrowRight01Icon size={24} className="group-hover:translate-x-2 transition duration-300" />
+              <ArrowRight01Icon
+                size={24}
+                className="group-hover:translate-x-2 transition duration-300"
+              />
             </>
           )}
         </Button>
