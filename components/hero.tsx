@@ -8,8 +8,8 @@ const Hero = () => {
   return (
     <section className="bg-[radial-gradient(ellipse_200%_100%_at_bottom_right,#318741,#141414_90%)] overflow-x-clip">
       <div className="container max-w-screen-2xl mx-auto pt-12 pb-20 px-4 lg:px-14 md:pt-5 md:pb-10">
-        <div className="md:flex items-center gap-5">
-          <div className="md:w-[478px]">
+        <div className="md:flex items-center gap-5 lg:gap-12">
+          <div className="md:w-[480px]">
             <div className="text-sm text-white inline-flex border border-[#999]/50 px-3 py-1 rounded-lg tracking-tight">
               Beta version coming soon
             </div>
@@ -38,13 +38,13 @@ const Hero = () => {
                   Learn more
                   <ArrowRight01Icon
                     size={24}
-                    className="group-hover:translate-x-2 transition duration-300"
+                    className="arrow"
                   />
                 </Link>
               </Button>
             </div>
           </div>
-          <div className="mt-20 md:mt-0 md:h-[648px] md:flex-1 relative">
+          <div className="mt-20 md:mt-0 md:h-[650px] md:flex-1 relative">
             <Image
               src={RobotImage}
               alt="AI Robot image"

@@ -38,7 +38,7 @@ const BlogPost = async ({ params }: { params: { slug: string } }) => {
               {post.title}
             </h1>
             {tags && (
-              <span className="bg-white/30 rounded-md text-white font-medium uppercase text-xs p-2">
+              <span className="bg-white/30 text-white rounded-xl font-bold text-[10px] md:text-xs uppercase p-1 px-2">
                 {tags}
               </span>
             )}

@@ -15,7 +15,7 @@ const Video = () => {
         <iframe
           width="100%"
           height="400"
-          src="https://www.youtube.com/embed/1_7gppvZaig?start=1"
+          src="https://www.youtube.com/embed/1_7gppvZaig?start=1&autoplay=1&mute=1"
           title="Gwaan Founder - British Science Association video"
           className="absolute top-0 left-0 w-full h-full rounded-lg"
           allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; autoplay;"

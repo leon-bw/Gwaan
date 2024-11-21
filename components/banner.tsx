@@ -7,6 +7,7 @@ import BarclaysLogo from "@/public/images/logos/Barclays-ELs.png";
 import BSALogo from "@/public/images/logos/BSA Logo_Colour_PNG.png";
 import CampusLogo from "@/public/images/logos/campusfounders.png";
 import D11ZLogo from "@/public/images/logos/D11Z_Logo.png";
+import BBCLogo from "@/public/images/logos/BBC_Logo.png";
 import { motion } from "framer-motion";
 
 const logos = [
@@ -16,6 +17,7 @@ const logos = [
   { src: BSALogo, alt: "British Science Association Logo" },
   { src: CampusLogo, alt: "Campus Founders Logo" },
   { src: D11ZLogo, alt: "D11Z Logo" },
+  { src: BBCLogo, alt: "BBC Logo" },
 ];
 
 const Banner = () => {

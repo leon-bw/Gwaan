@@ -42,12 +42,12 @@ const BlogCard = ({ post }: { post: BlogPost }) => {
                 className="text-night font-bold text-center rounded-lg py-3 flex items-center justify-start group-hover:scale-105 transition duration-300"
               >
                 Read More
-                <ArrowRight01Icon className="group-hover:translate-x-3 transition duration-300 ml-2" />
+                <ArrowRight01Icon className="arrow ml-2" />
               </Link>
               {post.tags && (
                 <div className="flex flex-wrap ml-auto gap-1">
                   {post.tags.map((tag) => (
-                    <span key={tag.id} className="bg-night/20 text-night rounded-lg p-1 px-2 font-bold text-[10px] uppercase">
+                    <span key={tag.id} className="bg-night/20 text-night rounded-xl p-1 px-2 font-bold text-[10px] uppercase">
                       {tag.name}
                     </span>
                   ))}

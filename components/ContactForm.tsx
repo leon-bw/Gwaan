@@ -116,7 +116,7 @@ const ContactForm = () => {
               Get in Touch
               <ArrowRight01Icon
                 size={24}
-                className="group-hover:translate-x-2 transition duration-300"
+                className="arrow"
               />
             </>
           )}

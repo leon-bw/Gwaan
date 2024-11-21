@@ -65,7 +65,7 @@ const CallToAction = () => {
               Learn more
               <ArrowRight01Icon
                 size={24}
-                className="group-hover:translate-x-2 transition duration-300"
+                className="arrow"
               />
             </Link>
           </Button>
