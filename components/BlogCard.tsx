@@ -4,6 +4,7 @@ import Image from "next/image";
 import FadeInAnimation from "@/components/FadeInAnimation";
 import { Card, CardContent, CardTitle } from "@/components/ui/card";
 import { ArrowRight01Icon } from "hugeicons-react";
+import ReactMarkdown from "react-markdown";
 
 type BlogPost = {
   id: string;
@@ -35,7 +36,9 @@ const BlogCard = ({ post }: { post: BlogPost }) => {
                 {post.title}
               </CardTitle>
             </Link>
-            <p className="mb-3 line-clamp-3">{post.content.slice(0, 290)}</p>
+            <div className="mb-3 line-clamp-3">
+              <ReactMarkdown>{post.content.slice(0, 290)}</ReactMarkdown>
+            </div>
             <div className="flex items-center">
               <Link
                 href={`/blog/${post.slug}`}
@@ -47,7 +50,10 @@ const BlogCard = ({ post }: { post: BlogPost }) => {
               {post.tags && (
                 <div className="flex flex-wrap ml-auto gap-1">
                   {post.tags.map((tag) => (
-                    <span key={tag.id} className="bg-night/20 text-night rounded-xl p-1 px-2 font-bold text-[10px] uppercase">
+                    <span
+                      key={tag.id}
+                      className="bg-night/20 text-night rounded-xl p-1 px-2 font-bold text-[10px] uppercase"
+                    >
                       {tag.name}
                     </span>
                   ))}

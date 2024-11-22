@@ -2,6 +2,7 @@ import prisma from "@/lib/db";
 import React from "react";
 import Image from "next/image";
 import { notFound } from "next/navigation";
+import ReactMarkdown from "react-markdown";
 
 const BlogPost = async ({ params }: { params: { slug: string } }) => {
   const { slug } = await params;
@@ -20,7 +21,6 @@ const BlogPost = async ({ params }: { params: { slug: string } }) => {
   }
 
   const formatDate = post.createdAt.toLocaleDateString("en-GB", {
-    weekday: "long",
     year: "numeric",
     month: "long",
     day: "numeric",
@@ -53,7 +53,9 @@ const BlogPost = async ({ params }: { params: { slug: string } }) => {
           height={400}
           className="mx-auto rounded-md"
         />
-        <p className="pt-8 md:pt-16 max-w-2xl mx-auto">{post.content}</p>
+        <div className="pt-8 md:pt-16 max-w-2xl mx-auto prose">
+          <ReactMarkdown>{post.content}</ReactMarkdown>
+        </div>
       </div>
     </>
   );
