@@ -84,7 +84,7 @@ const Navigation = () => {
               sections of the website.
             </SheetDescription>
           </VisuallyHidden.Root>
-          <nav className="flex flex-col gap-y-4 pt-12">
+          <nav className="flex flex-col gap-y-6 pt-12">
             {routes.map(({ href, label, icon }) => {
               const NavIcons = icon;
               return (
@@ -92,7 +92,7 @@ const Navigation = () => {
                   key={href}
                   variant={href === pathname ? "primary" : "ghost"}
                   onClick={() => onClick(href)}
-                  className="w-full text-white hover:bg-black hover:text-white hover:translate-x-2 transition duration-300 font-semibold text-sm justify-start pl-4"
+                  className="w-full text-white hover:bg-black hover:text-white hover:translate-x-2 transition duration-300 font-semibold text-sm justify-start pl-4 py-7 rounded-lg"
                   size="lg"
                 >
                   <NavIcons className="mr-4" size={24} />
