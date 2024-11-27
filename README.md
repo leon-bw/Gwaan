@@ -1,36 +1,65 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Gwaan
+
+This is the first update to the web application for Gwaan, a tech startup focused on using AI to analyse and improve exercise performance.
+
+## Tech Stack
+**Frontend** - Next.js, TypeScript, Tailwind CSS, ShadCN, Framer Motion
+
+**Backend** - Prisma, PostgreSQL
+
+**Database** - PostgreSQL (via Docker)
+
+## Features
+
+- Responsive design
+- Contact form with validation using React Hook Form and Zod
+- Team and Blog populated from the database
+- UI using Tailwind CSS and ShadCN components
 
 ## Getting Started
 
-First, run the development server:
+Ensure you have the following installed: 
+- Node.js
+- Docker
+- Git
+
+
+1. **Clone the Repository**
+
+```bash
+git clone https://github.com/your-username/gwaan.git
+```
+
+2. **Install Dependencies**
+
+```bash
+npm install
+```
+
+3. **Set Up Environment Variables**
+- Create a .env.local file in the project root.
+- Add the following (replace placeholders with your PostgreSQL credentials):
+
+```bash
+DATABASE_URL="postgresql://your_user:your_password@localhost:5432/gwaan_db"
+```
+
+4. **Run PostgreSQL with Docker**
+- Create a .env.local file in the project root.
+- Add the following (replace placeholders with your PostgreSQL credentials):
+
+```bash
+docker run --name postgres-db -e POSTGRES_USER=your_user -e POSTGRES_PASSWORD=your_password -e POSTGRES_DB=gwaan_db -p 5432:5432 -d postgres
+```
+
+5. **Apply Database Migrations**
+
+```bash
+npm prisma migrate:dev
+```
+
+6. **Start Development Server**
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
