@@ -97,6 +97,10 @@ body {
     @apply h-10 w-auto grayscale;
   }
 
+  .page-title {
+    @apply text-4xl md:text-7xl font-bold tracking-tight bg-gradient-to-b from-white to-seaGreen text-transparent bg-clip-text mt-6 pb-2 text-center capitalize
+  }
+
   .section-title {
     @apply text-center text-3xl md:text-6xl md:leading-[60px] font-bold tracking-tighter bg-gradient-to-b from-night to-seaGreen text-transparent bg-clip-text;
   }

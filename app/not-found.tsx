@@ -10,7 +10,9 @@ const NotFound = () => {
       <div className="section-container">
         <div className="section-heading">
           <div className="grid grid-cols-1 gap-8 text-center mb-8">
-            <h1 className="section-title text-white">Oops! Page Not Found</h1>
+            <h1 className="section-title text-white">
+              404{<br />}Page Not Found
+            </h1>
             <p className="section-description text-white mb-8">
               Looks like you've strayed off course, this page isn't part of your
               workout routine. Don’t worry, even the best athletes lose track
@@ -20,7 +22,7 @@ const NotFound = () => {
               href="/"
               className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm bg-secondary text-night hover:text-white hover:bg-white/20 h-10 p-4 font-semibold mx-auto transition duration-300"
             >
-              Back to Home Base
+              Return Home
             </Link>
           </div>
         </div>
