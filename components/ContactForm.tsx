@@ -104,7 +104,7 @@ const ContactForm = () => {
           type="submit"
           variant={"default"}
           disabled={isLoading}
-          className="bg-seaGreen w-full gap-2 font-semibold hover:bg-gwaanGreen transition duration-300 mt-2 py-6 group"
+          className="bg-seaGreen w-full gap-2 font-semibold hover:bg-gwaanGreen border-transparent focus:border-black/50 border-2 transition duration-300 mt-2 py-6 group"
         >
           {isLoading ? (
             <>

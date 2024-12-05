@@ -47,7 +47,7 @@ const FormFieldItem = ({
                   onValueChange={field.onChange}
                   defaultValue={field.value}
                 >
-                  <SelectTrigger className="bg-white border-night/20">
+                  <SelectTrigger className="bg-white focus:border-black/50">
                     <SelectValue placeholder={placeholder} />
                   </SelectTrigger>
                   <SelectContent>
