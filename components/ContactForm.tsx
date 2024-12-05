@@ -114,10 +114,7 @@ const ContactForm = () => {
           ) : (
             <>
               Get in Touch
-              <ArrowRight01Icon
-                size={24}
-                className="arrow"
-              />
+              <ArrowRight01Icon size={24} className="arrow" />
             </>
           )}
         </Button>

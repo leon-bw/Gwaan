@@ -36,10 +36,7 @@ const Hero = () => {
               >
                 <Link href={"/about"}>
                   Learn more
-                  <ArrowRight01Icon
-                    size={24}
-                    className="arrow"
-                  />
+                  <ArrowRight01Icon size={24} className="arrow" />
                 </Link>
               </Button>
             </div>
