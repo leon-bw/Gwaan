@@ -20,7 +20,7 @@ This is the first update to the web Gwaan website, a tech startup focused on fit
 
 ## Getting Started
 
-Ensure you have the following installed: 
+Ensure you have the following installed:
 - Node.js
 - Docker
 - Git
