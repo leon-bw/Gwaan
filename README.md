@@ -29,7 +29,7 @@ Ensure you have the following installed:
 1. **Clone the Repository**
 
 ```bash
-git clone https://github.com/your-username/gwaan.git
+git clone https://github.com/leon-bw/gwaan.git
 ```
 
 2. **Install Dependencies**
@@ -49,6 +49,8 @@ DATABASE_URL="postgresql://your_user:your_password@localhost:5432/gwaan_db"
 4. **Run PostgreSQL with Docker**
 
 - If you haven't already started your PostgreSQL container, you can do so with the following command. This step will create and run a PostgreSQL instance using Docker:
+
+- If you get a port clash after replacing the placeholders, simply try a different port on your local machine
 
 ```bash
 docker run --name postgres-db -e POSTGRES_USER=your_user -e POSTGRES_PASSWORD=your_password -e POSTGRES_DB=gwaan_db -p 5432:5432 -d postgres
