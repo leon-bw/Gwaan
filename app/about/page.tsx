@@ -41,9 +41,9 @@ const About = async () => {
         <div className="section-heading pt-24">
           <h2 className="section-title pb-4">Where Culture Meets Innovation</h2>
           <p className="section-description">
-            Founded in Brixton, London’s Caribbean hub, Gwaan combines the
-            spirit of community and progress. With a nod to our founder's
-            heritage, We’re committed to making advanced training technology
+            Founded in Brixton, London&apos;s Caribbean hub, Gwaan combines the
+            spirit of community and progress. With a nod to our founder&apos;s
+            heritage, We&apos;re committed to making advanced training technology
             accessible to everyone, empowering all to embrace fitness without
             limits.
           </p>

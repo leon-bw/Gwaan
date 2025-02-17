@@ -14,9 +14,9 @@ const NotFound = () => {
               404{<br />}Page Not Found
             </h1>
             <p className="section-description text-white mb-8">
-              Looks like you've strayed off course, this page isn't part of your
-              workout routine. Don’t worry, even the best athletes lose track
-              sometimes. Let's get you back on the right path!
+              Looks like you&apos;ve strayed off course, this page isn&apos;t part of your
+              workout routine. Don&apos;t worry, even the best athletes lose track
+              sometimes. Let&apos;s get you back on the right path!
             </p>
             <Link
               href="/"
