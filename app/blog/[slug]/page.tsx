@@ -1,11 +1,18 @@
-import prisma from "@/lib/db";
-import React from "react";
-import Image from "next/image";
-import { notFound } from "next/navigation";
-import ReactMarkdown from "react-markdown";
+import { PrismaClient } from '@prisma/client';
+import Image from 'next/image';
+import ReactMarkdown from 'react-markdown';
+import { notFound } from 'next/navigation';
 
-const BlogPost = async ({ params }: { params: { slug: string } }) => {
-  const { slug } = await params;
+const prisma = new PrismaClient();
+
+type BlogPostProps = {
+  params: {
+    slug: string;
+  };
+}
+
+const BlogPost = async ({ params }: BlogPostProps) => {
+  const { slug } = params;
 
   const post = await prisma.blogPost.findUnique({
     where: {
