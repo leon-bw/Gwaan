@@ -1,18 +1,16 @@
-import { PrismaClient } from '@prisma/client';
+import prisma from '@/lib/db';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import ReactMarkdown from 'react-markdown';
 
-const prisma = new PrismaClient();
-
-type Props = {
+type PageProps = {
   params: {
     slug: string;
   };
-  searchParams: { [key: string]: string | string[] | undefined };
+  searchParams?: { [key: string]: string | string[] | undefined };
 }
 
-const BlogPost = async ({ params }: Props) => {
+const BlogPost = async ({ params }: PageProps) => {
   const { slug } = params;
 
   const post = await prisma.blogPost.findUnique({
