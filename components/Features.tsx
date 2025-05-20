@@ -1,7 +1,9 @@
 import IconCard from "@/components/IconCard";
-import { TimeQuarterPassIcon } from "hugeicons-react";
-import { CheckmarkCircle03Icon } from "hugeicons-react";
-import { BodyPartMuscleIcon } from "hugeicons-react";
+import {
+  BodyPartMuscleIcon,
+  CheckmarkCircle03Icon,
+  TimeQuarterPassIcon,
+} from "hugeicons-react";
 
 const cardContent = [
   {
@@ -28,8 +30,8 @@ const Features = () => {
         <div className="section-heading">
           <h2 className="section-title pb-5">Smart fitness, Simplified</h2>
           <p className="section-description mt-5">
-            Experience the future of fitness with our AI engine, whether you’re
-            at home or on the go.
+            Experience the future of fitness with our AI engine, whether
+            you&apos;re at home or on the go.
           </p>
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-8 lg:gap-8 lg:mt-12">

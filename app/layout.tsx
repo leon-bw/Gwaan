@@ -1,10 +1,10 @@
-import type { Metadata } from "next";
-import "./globals.css";
+import CallToAction from "@/components/CallToAction";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
-import CallToAction from "@/components/CallToAction";
 import { Toaster } from "@/components/ui/toaster";
+import type { Metadata } from "next";
 import { Outfit } from "next/font/google";
+import "./globals.css";
 
 const outfit = Outfit({ subsets: ["latin"] });
 
