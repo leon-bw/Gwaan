@@ -1,12 +1,12 @@
 "use client";
 
-import React, { useRef } from "react";
-import Link from "next/link";
-import { Button } from "./ui/button";
-import { ArrowRight01Icon } from "hugeicons-react";
 import Molecule from "@/public/images/molecule.png";
 import Molecule2 from "@/public/images/molecule_3.png";
 import { motion, useScroll, useTransform } from "framer-motion";
+import { ArrowRight01Icon } from "hugeicons-react";
+import Link from "next/link";
+import { useRef } from "react";
+import { Button } from "./ui/button";
 
 const CallToAction = () => {
   const sectionRef = useRef(null);
@@ -49,11 +49,14 @@ const CallToAction = () => {
         </div>
         <div className="flex gap-4 mt-10 justify-center">
           <Button
+            asChild
             size="lg"
             variant="secondary"
             className="font-semibold hover:bg-white/30 hover:border-seaGreen hover:text-white transition duration-300"
           >
-            Sign Up
+            <Link href={"https://iidsy56pe6e.typeform.com/to/uR7Q8tID"}>
+              Sign Up
+            </Link>
           </Button>
           <Button
             asChild
@@ -63,10 +66,7 @@ const CallToAction = () => {
           >
             <Link href={"/about"}>
               Learn more
-              <ArrowRight01Icon
-                size={24}
-                className="arrow"
-              />
+              <ArrowRight01Icon size={24} className="arrow" />
             </Link>
           </Button>
         </div>
