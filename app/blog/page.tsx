@@ -1,5 +1,5 @@
-import PageHeader from "@/components/PageHeader";
 import BlogCard from "@/components/BlogCard";
+import PageHeader from "@/components/PageHeader";
 import prisma from "@/lib/db";
 
 const Blog = async () => {
@@ -28,5 +28,7 @@ const Blog = async () => {
     </>
   );
 };
+
+export const dynamic = 'force-dynamic';
 
 export default Blog;

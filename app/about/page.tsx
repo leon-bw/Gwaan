@@ -1,13 +1,13 @@
-import PageHeader from "@/components/PageHeader";
 import IconCard from "@/components/IconCard";
 import MemberCard from "@/components/MemberCard";
-import {
-  UserGroupIcon,
-  Layers01Icon,
-  CheckmarkBadge02Icon,
-} from "hugeicons-react";
-import prisma from "@/lib/db";
+import PageHeader from "@/components/PageHeader";
 import FounderVideo from "@/components/Video";
+import prisma from "@/lib/db";
+import {
+  CheckmarkBadge02Icon,
+  Layers01Icon,
+  UserGroupIcon,
+} from "hugeicons-react";
 
 const cardContent = [
   {
@@ -74,5 +74,7 @@ const About = async () => {
     </>
   );
 };
+
+export const dynamic = 'force-dynamic';
 
 export default About;

@@ -1,8 +1,8 @@
-import Link from "next/link";
-import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { ArrowRight01Icon } from "hugeicons-react";
 import RobotImage from "@/public/images/robot_with_ai.webp";
+import { ArrowRight01Icon } from "hugeicons-react";
+import Image from "next/image";
+import Link from "next/link";
 
 const Hero = () => {
   return (
@@ -18,15 +18,18 @@ const Hero = () => {
             </h1>
             <p className="text-xl text-white tracking-tight mt-6">
               Creator-driven movement tracking that makes form and rep
-              monitoring simple—perfect for home workouts!
+              monitoring simple, perfect for home workouts!
             </p>
             <div className="flex gap-4 items-center mt-8 flex-wrap">
               <Button
+                asChild
                 size="lg"
                 variant="secondary"
                 className="font-semibold bg-white hover:bg-white/30 hover:text-white transition duration-300"
               >
-                Get Early Access
+                <Link href={"https://iidsy56pe6e.typeform.com/to/uR7Q8tID"}>
+                  Get Early Access
+                </Link>
               </Button>
               <Button
                 asChild

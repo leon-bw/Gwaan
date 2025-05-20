@@ -67,4 +67,6 @@ const BlogPost = async ({ params }: PageProps) => {
   );
 };
 
+export const dynamic = 'force-dynamic';
+
 export default BlogPost;
