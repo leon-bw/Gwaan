@@ -10,10 +10,10 @@ const config: Config = {
   theme: {
   	extend: {
   		colors: {
-			night: "#141414",
+			night: "#393f51",
 			darkGreen: "#102306",
 			gwaanGreen: "#20A450",
-			seaGreen: "#318741",
+			seaGreen: "#328042",
 			schoolBus: "#F6D813",
 			gwaanYellow: "#EEE026",
 			seaSalt: "#FAFAFA",

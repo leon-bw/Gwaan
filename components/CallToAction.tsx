@@ -21,7 +21,7 @@ const CallToAction = () => {
   return (
     <section
       ref={sectionRef}
-      className="bg-[radial-gradient(ellipse_200%_100%_at_top_right,#318741,#141414_70%)] overflow-x-clip py-24"
+      className="bg-[radial-gradient(ellipse_200%_100%_at_top_right,#328042,#393f51_70%)] overflow-x-clip py-24"
     >
       <div className="container mx-auto">
         <div className="section-heading px-4 text-center relative">

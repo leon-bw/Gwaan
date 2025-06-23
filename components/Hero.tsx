@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const Hero = () => {
   return (
-    <section className="bg-[radial-gradient(ellipse_200%_100%_at_bottom_right,#318741,#141414_90%)] overflow-x-clip">
+    <section className="bg-[radial-gradient(ellipse_200%_100%_at_bottom_right,#328042,#393f51_90%)] overflow-x-clip">
       <div className="container max-w-screen-2xl mx-auto pt-12 pb-20 px-4 lg:px-14 md:pt-5 md:pb-10">
         <div className="md:flex items-center gap-5 lg:gap-12">
           <div className="md:w-[480px]">
